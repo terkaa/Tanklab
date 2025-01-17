@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cab27f13c267f9e42ab47de965b407b9
+timeCreated: 1571294301
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Examples/HTTP/Streaming.prefab
+  uploadId: 622754

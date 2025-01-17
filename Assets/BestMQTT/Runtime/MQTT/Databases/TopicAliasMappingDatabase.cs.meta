@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 28779be4e5bc4ee4f816ac34835d53ea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Runtime/MQTT/Databases/TopicAliasMappingDatabase.cs
+  uploadId: 522207

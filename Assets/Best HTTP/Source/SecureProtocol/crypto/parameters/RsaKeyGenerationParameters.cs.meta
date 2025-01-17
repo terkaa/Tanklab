@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2dfb8ecda9194534ebe72fd378a0a6ba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/parameters/RsaKeyGenerationParameters.cs
+  uploadId: 622754

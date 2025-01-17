@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d534f39bac83c4345bdd3b1116cc1b3b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/asn1/cms/ContentInfoParser.cs
+  uploadId: 622754

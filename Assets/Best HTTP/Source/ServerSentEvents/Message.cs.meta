@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9a3820c17c331374a82799277eb9ede0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/ServerSentEvents/Message.cs
+  uploadId: 622754

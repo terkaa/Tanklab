@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d12096d6e11917c408186442aade2b09
+timeCreated: 1571210042
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Connections/TCPConnector.cs
+  uploadId: 622754

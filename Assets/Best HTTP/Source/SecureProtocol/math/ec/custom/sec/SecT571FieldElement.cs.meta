@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d2a199651f1f154d8ed8d08c7f52f15
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/math/ec/custom/sec/SecT571FieldElement.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2aaa0fb6f892b1f46a0b89ffe9d98654
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/generators/DesEdeKeyGenerator.cs
+  uploadId: 622754

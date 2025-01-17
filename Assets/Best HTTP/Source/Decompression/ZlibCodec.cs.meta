@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bc104cfa5b2ba31408766b86b9977226
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Decompression/ZlibCodec.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c268b3662c094ee4796d92e5093284eb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/crypto/impl/TlsBlockCipherImpl.cs
+  uploadId: 622754

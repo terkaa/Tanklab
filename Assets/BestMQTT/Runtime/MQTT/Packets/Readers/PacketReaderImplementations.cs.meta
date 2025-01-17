@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 94ea93434c2f6114b85175194fa57567
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Runtime/MQTT/Packets/Readers/PacketReaderImplementations.cs
+  uploadId: 522207

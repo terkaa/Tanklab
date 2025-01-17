@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 25c60db0524552144bf03b547ae8a585
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SignalR/Messages/IServerMessage.cs
+  uploadId: 622754

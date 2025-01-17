@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: d3e42ed97af74b54fba27235416b1191
+timeCreated: 1508423928
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Extensions/CircularBuffer.cs
+  uploadId: 622754

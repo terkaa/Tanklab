@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6d5d3a12339bae24780a10f5ad105594
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Runtime/MQTT/MQTTClient.PacketHandlers.cs
+  uploadId: 522207

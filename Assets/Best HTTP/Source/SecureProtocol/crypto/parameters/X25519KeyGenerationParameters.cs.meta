@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 34b65ca852361294a88bedf107bfbb97
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/parameters/X25519KeyGenerationParameters.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 58ef74f62e307544fa7e434332a6d3ac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Proxies/Autodetect/FrameworkProxyDetector.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8c62226f9fd839c4e87dce9d3916d46c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SocketIO.3/Parsers/DefaultJsonParser.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ebfb6e5ada8143143a0e9abc8f253d26
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/engines/Dstu7624WrapEngine.cs
+  uploadId: 622754

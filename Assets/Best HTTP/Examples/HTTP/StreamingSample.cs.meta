@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7608ce95dba469c42b49baa85e3c300c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Examples/HTTP/StreamingSample.cs
+  uploadId: 622754

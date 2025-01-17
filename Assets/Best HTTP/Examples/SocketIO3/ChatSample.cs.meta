@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0787028fcb595bf43b8639c4ba5a8aea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Examples/SocketIO3/ChatSample.cs
+  uploadId: 622754

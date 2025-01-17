@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 4c8c0b8f6a117514f8c6dfcc26c949e0
+timeCreated: 1571210041
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Core/ConnectionEvents.cs
+  uploadId: 622754
