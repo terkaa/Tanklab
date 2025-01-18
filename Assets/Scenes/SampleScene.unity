@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22522229, y: 0.6680039, z: -0.22351098, w: 0.67311853}
-  m_LocalPosition: {x: -0.77, y: 3.37, z: -1.01}
+  m_LocalPosition: {x: -6.29, y: 9.52, z: -1.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -440,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964602099}
-  - component: {fileID: 1964602098}
+  - component: {fileID: 1964602100}
   m_Layer: 0
   m_Name: DTControl
   m_TagString: Untagged
@@ -448,19 +448,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1964602098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964602097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbceb61f660c9e4cb5c5caf8fd36972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlueROV: {fileID: 1404404734}
 --- !u!4 &1964602099
 Transform:
   m_ObjectHideFlags: 0
@@ -476,6 +463,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964602100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964602097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b0ee56a41f20d43a821989a9d1550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectAddress: rebo.centria.fi
+  connectPort: 5349
+  robotJointName: ROVPose
+  receiveSubscribeTopic: BlueROV/from
+  sendSubscribeTopic: BlueROV/to
+  robotGripperName: gripper
+  BlueROV: {fileID: 1404404734}
+  Xoffset: 1
+  Yoffset: -1
+  Zoffset: 1
 --- !u!1001 &2006549545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -486,15 +495,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7aee583de54747a46920c53b433583c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7aee583de54747a46920c53b433583c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.97
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7aee583de54747a46920c53b433583c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7aee583de54747a46920c53b433583c7, type: 3}
       propertyPath: m_LocalRotation.w
