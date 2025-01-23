@@ -14,10 +14,14 @@ public class MQTTConnectionCNC : MQTTConnection
     [SerializeField]
     private string robotGripperName = "gripper";
     public GameObject BlueROV;
+    public GameObject QTMReference;
     public float  Xoffset;
     public float  Yoffset;
     public float  Zoffset;
 
+
+    [SerializeField]
+    private VirtualJoystick leftJoystick;
     //public GameObject zaxisscaleObject;
 
     //private ArticulationBody xscale;
@@ -26,6 +30,9 @@ public class MQTTConnectionCNC : MQTTConnection
 
     private void Start()
     {
+        
+        
+
         //if (xaxisscaleObject != null && yaxisscaleObject != null && zaxisscaleObject != null)
         //{
         //    xscale = xaxisscaleObject.GetComponent<ArticulationBody>();
@@ -33,6 +40,60 @@ public class MQTTConnectionCNC : MQTTConnection
         //    zscale = zaxisscaleObject.GetComponent<ArticulationBody>();
        // }
     }
+
+
+     // Update is called once per frame
+    void Update()
+    {
+         if (leftJoystick.InputDirection != Vector3.zero)
+    {
+        HandleLeftJoystickDirection(leftJoystick.InputDirection);
+    }
+        else
+        {
+        //    PublishJointAndGripperValues(0);
+        }
+        
+
+    }
+
+
+     void HandleLeftJoystickDirection(Vector3 input)
+{
+    // Determine if the movement is more horizontal or vertical
+    if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+    {
+        // Horizontal movement (Left or Right)
+        switch (input.x)
+        {
+            case float n when (n > 0):
+                Debug.Log("Left Joystick moved Right");
+                PublishJointAndGripperValues(3);
+                break;
+            case float n when (n < 0):
+                Debug.Log("Left Joystick moved Left");
+                PublishJointAndGripperValues(1);
+                break;
+        }
+    }
+    else
+    {
+        // Vertical movement (Up or Down)
+        switch (input.y)
+        {
+            case float n when (n > 0):
+                Debug.Log("Left Joystick moved Up");
+                PublishJointAndGripperValues(1);
+                break;
+            case float n when (n < 0):
+                Debug.Log("Left Joystick moved Down");
+                PublishJointAndGripperValues(2);
+                break;
+        }
+    }
+}
+    
+
     protected override void OnMessage(MQTTClient client, SubscriptionTopic topic, string topicName, ApplicationMessage message)
     {
 
@@ -45,6 +106,9 @@ public class MQTTConnectionCNC : MQTTConnection
         JSONNode LDx = data[robotJointName][0].Value;
         JSONNode LDy = data[robotJointName][1].Value;
         JSONNode LDz = data[robotJointName][2].Value;
+        JSONNode LDrx = data[robotJointName][3].Value;
+        JSONNode LDry = data[robotJointName][4].Value;
+        JSONNode LDrz = data[robotJointName][5].Value;      
         //roboStatus P = JsonUtility.FromJson<roboStatus>(msg);
         Debug.Log("X: " + LDx + " Y: " + LDy + " LDz: " + LDz);
         //BlueROV = GameObject.Find(string.Format("Omron_LD250"));
@@ -53,6 +117,8 @@ public class MQTTConnectionCNC : MQTTConnection
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
         BlueROV.transform.position = new Vector3(Xoffset+LDx, Zoffset + LDz, Yoffset + LDy);
+        BlueROV.transform.eulerAngles = new Vector3(LDrx,LDry,LDrz);
+     
         //}
         Debug.Log("Stage3\n");
     }

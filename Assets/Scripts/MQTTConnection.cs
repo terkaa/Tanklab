@@ -29,6 +29,10 @@ public abstract class MQTTConnection : MonoBehaviour
     [SerializeField]
     private string sendSubscribeTopic = "Topic/to";
 
+    //[SerializeField]
+    //private VirtualJoystick leftJoystick;
+
+  
    // [SerializeField]
 //    protected RobotJointAngleTransformer[] sendRobotJoints;
 
@@ -112,9 +116,9 @@ public abstract class MQTTConnection : MonoBehaviour
 
     protected abstract void OnMessage(MQTTClient client, SubscriptionTopic topic, string topicName, ApplicationMessage message);
 
-   public void PublishJointAndGripperValues(float xposition, float yposition, float zposition, float spindlespeed, float coolant)
+   public void PublishJointAndGripperValues(int direction)
     {
-        string jsonStr = GetValuesJSON(xposition, yposition, zposition, spindlespeed, coolant);
+        string jsonStr = "{\"ROVDirection\":[\"" + direction.ToString() + "\"]}";
        // string jsonStr = "rqwrqr";
         Debug.Log("Publish msg: "+ jsonStr);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonStr);
