@@ -6,6 +6,8 @@ public class CameraActivator : MonoBehaviour
     // Reference to the Unity Button on the canvas
     public Button ridebutton;
     public Button cancelridebutton;
+    public Toggle togglewater;
+    public Toggle toggleceiling;
 
     // Reference to the camera component to be activated
     public Camera rideCamera;
@@ -20,6 +22,9 @@ public class CameraActivator : MonoBehaviour
     public GameObject LeftJoystick;
     public GameObject RightJoystick;
 
+    // References to the GameObjects to be toggled
+    public GameObject Water;
+    public GameObject Ceiling;
 
     private void Start()
     {
@@ -39,6 +44,25 @@ public class CameraActivator : MonoBehaviour
         // Add listeners to the buttons' onClick events
         ridebutton.onClick.AddListener(ActivateRideCamera);
         cancelridebutton.onClick.AddListener(DeactivateRideCamera);
+
+        // Ensure toggles and related objects are assigned
+        if (togglewater != null && Water != null)
+        {
+            togglewater.onValueChanged.AddListener(ToggleWaterVisibility);
+        }
+        else
+        {
+            Debug.LogError("ToggleWater or Water GameObject is not assigned.");
+        }
+
+        if (toggleceiling != null && Ceiling != null)
+        {
+            toggleceiling.onValueChanged.AddListener(ToggleCeilingVisibility);
+        }
+        else
+        {
+            Debug.LogError("ToggleCeiling or Ceiling GameObject is not assigned.");
+        }
     }
 
     private void ActivateRideCamera()
@@ -46,7 +70,7 @@ public class CameraActivator : MonoBehaviour
         // Activate the ride camera
         rideCamera.gameObject.SetActive(true);
 
-        // Activate the ride joystick deactivate left and right
+        // Activate the ride joystick, deactivate left and right
         ROVJoystick.gameObject.SetActive(true);
         LeftJoystick.gameObject.SetActive(false);
         RightJoystick.gameObject.SetActive(false);
@@ -81,6 +105,18 @@ public class CameraActivator : MonoBehaviour
         Debug.Log("RideCamera deactivated, MainCamera activated, and buttons updated.");
     }
 
+    private void ToggleWaterVisibility(bool isOn)
+    {
+        Water.SetActive(isOn);
+        Debug.Log($"Water visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
+    private void ToggleCeilingVisibility(bool isOn)
+    {
+        Ceiling.SetActive(!isOn);
+        Debug.Log($"Ceiling visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
     private void OnDestroy()
     {
         // Remove the listeners when the object is destroyed to avoid memory leaks
@@ -92,6 +128,16 @@ public class CameraActivator : MonoBehaviour
         if (cancelridebutton != null)
         {
             cancelridebutton.onClick.RemoveListener(DeactivateRideCamera);
+        }
+
+        if (togglewater != null)
+        {
+            togglewater.onValueChanged.RemoveListener(ToggleWaterVisibility);
+        }
+
+        if (toggleceiling != null)
+        {
+            toggleceiling.onValueChanged.RemoveListener(ToggleCeilingVisibility);
         }
     }
 }
