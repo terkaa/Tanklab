@@ -25,6 +25,10 @@ public class CameraActivator : MonoBehaviour
     // References to the GameObjects to be toggled
     public GameObject Water;
     public GameObject Ceiling;
+    public InputField MessageInput; 
+    private string message;
+    private bool lights;
+    private bool gripper;
 
     private void Start()
     {
@@ -45,6 +49,10 @@ public class CameraActivator : MonoBehaviour
         ridebutton.onClick.AddListener(ActivateRideCamera);
         cancelridebutton.onClick.AddListener(DeactivateRideCamera);
 
+        // Add listener to the messageInput change
+        cancelridebutton.onClick.AddListener(DeactivateRideCamera);
+       
+
         // Ensure toggles and related objects are assigned
         if (togglewater != null && Water != null)
         {
@@ -62,6 +70,12 @@ public class CameraActivator : MonoBehaviour
         else
         {
             Debug.LogError("ToggleCeiling or Ceiling GameObject is not assigned.");
+        }
+
+       // Add listener for InputField (checking for Enter key press)
+        if (MessageInput != null)
+        {
+            MessageInput.onEndEdit.AddListener(OnMessageInputEndEdit);
         }
     }
 
@@ -115,6 +129,15 @@ public class CameraActivator : MonoBehaviour
     {
         Ceiling.SetActive(!isOn);
         Debug.Log($"Ceiling visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
+       private void OnMessageInputEndEdit(string text)
+    {
+        if (!string.IsNullOrEmpty(text))
+        {
+            Debug.Log("Message Sent: " + text);
+            MessageInput.text = ""; // Optionally clear the input field after sending
+        }
     }
 
     private void OnDestroy()

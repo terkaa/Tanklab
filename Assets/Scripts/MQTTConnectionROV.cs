@@ -51,7 +51,7 @@ public class MQTTConnectionCNC : MQTTConnection
     }
         else
         {
-        //    PublishJointAndGripperValues(0);
+            PublishJointAndGripperValues(0);
         }
         
 
@@ -72,7 +72,7 @@ public class MQTTConnectionCNC : MQTTConnection
                 break;
             case float n when (n < 0):
                 Debug.Log("Left Joystick moved Left");
-                PublishJointAndGripperValues(1);
+                PublishJointAndGripperValues(4);
                 break;
         }
     }
