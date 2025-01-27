@@ -12,48 +12,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ColdZinc.010
-    second: {fileID: 2100000, guid: c49f80cd1a6a6e74b97bc69aae99e21b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdZinc.011
-    second: {fileID: 2100000, guid: b058fb71cf71dbd42973644606bcda0d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdZinc.012
-    second: {fileID: 2100000, guid: cd0b1c902244a704895b9a9553705d28, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdZinc.013
-    second: {fileID: 2100000, guid: a89be8352c8e21643a8796375860bc14, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdZinc.014
-    second: {fileID: 2100000, guid: 247bd7d929261c047a3a2b915621361f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ColdZinc.015
-    second: {fileID: 2100000, guid: b14eefb382f272a43acac2a03ea7bf37, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: 5b5bfdfa4ac20244ba4ec55aff6ad777, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 9c4d22c73b2de0a45882a0bc3ab27476, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass.001
-    second: {fileID: 2100000, guid: 0d52286d15fd344418e1166519e48f15, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -82,28 +42,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: LightBulb
+    second: {fileID: 2100000, guid: fae36a4c3672fed4c906996dc948de4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: LightFrames
     second: {fileID: 2100000, guid: 15fb40ae029177f4ea89c46bdd88dd18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: b24a204a1f9a0f74bbb516e5653f7e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: MattBlack
     second: {fileID: 2100000, guid: 82569881fd42f60449d7a53a94580f32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MattBlack.001
-    second: {fileID: 2100000, guid: a8848112b17ff4e42b65fd6ab047836c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MattBlack.002
-    second: {fileID: 2100000, guid: a48601b371097f24585042ad43c29c95, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TankFiberglass
-    second: {fileID: 2100000, guid: 026371f2597da264fa906f996ca85157, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -118,42 +73,47 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: BricskInside
-    second: {fileID: 2800000, guid: 181af454e0b23cf489a32bc9f9c5ea4b, type: 3}
+    second: {fileID: 2800000, guid: c32a629a0cf3945429946530b0b61cb4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: HVACVent2
-    second: {fileID: 2800000, guid: 53160fd6996946b4eb8131823679f60d, type: 3}
+    second: {fileID: 2800000, guid: ed8fc99f0955e1a4c9f204c90d654475, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: HVACdehumifier
-    second: {fileID: 2800000, guid: 658c3959b58839f4cbdc8791a0b5383e, type: 3}
+    second: {fileID: 2800000, guid: f71c9408366e1b84689c344c66de0c11, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Liftdoor
-    second: {fileID: 2800000, guid: b52ad77625871a64e988c6c35284873d, type: 3}
+    second: {fileID: 2800000, guid: c05cdf12517d3fe42b88ba75070c1ed3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Pipe003_2K_Color
-    second: {fileID: 2800000, guid: 1e776599f5e7ae941866203e7755b0cb, type: 3}
+    second: {fileID: 2800000, guid: 77de0c82ccc2ce64fb380c97f2a7faae, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Pipe003_2K_Metalness
-    second: {fileID: 2800000, guid: 8e57bafc7938b404ea40bf842dfda943, type: 3}
+    second: {fileID: 2800000, guid: f3893ab17d138614c91d2042cdbbe587, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Pipe003_2K_NormalGL
-    second: {fileID: 2800000, guid: 51d578220d9d45b439fea0ee8120d727, type: 3}
+    second: {fileID: 2800000, guid: ec2297fa7516beb43a4f24ff7c27e671, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Pipe003_2K_Roughness
-    second: {fileID: 2800000, guid: 941cd7acd24ee814fa6d66fbb5719f42, type: 3}
+    second: {fileID: 2800000, guid: 3147c32c834913b4682371e69068e4cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: metal_0042_color_1k
+    second: {fileID: 2800000, guid: 1ac99d28faf6a5e4fafaa2ec8423270d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

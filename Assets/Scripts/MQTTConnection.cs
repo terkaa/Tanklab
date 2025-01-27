@@ -22,8 +22,8 @@ public abstract class MQTTConnection : MonoBehaviour
     [SerializeField]
     private string receiveSubscribeTopic = "Topic/from";
 
-  //  [SerializeField]
-   // protected RobotJointAngleTransformer[] receiveRobotJoints;
+    //  [SerializeField]
+    // protected RobotJointAngleTransformer[] receiveRobotJoints;
 
     [Header("Send (to)")]
     [SerializeField]
@@ -32,12 +32,13 @@ public abstract class MQTTConnection : MonoBehaviour
     //[SerializeField]
     //private VirtualJoystick leftJoystick;
 
-  
-   // [SerializeField]
-//    protected RobotJointAngleTransformer[] sendRobotJoints;
+
+    // [SerializeField]
+    //    protected RobotJointAngleTransformer[] sendRobotJoints;
 
     private MQTTClient client;
     private ApplicationMessagePacketBuilder sender;
+    private String message = "Test";
 
     public bool ApplyReceivedValues { get; set; } = true; // When true, values received through MQTT are set to robot joints.
 
@@ -47,16 +48,16 @@ public abstract class MQTTConnection : MonoBehaviour
 
     protected virtual void Awake()
     {
-      //  JointsValues = new float[receiveRobotJoints.Length];
-      //  SendJointValues = new float[sendRobotJoints.Length];
+        //  JointsValues = new float[receiveRobotJoints.Length];
+        //  SendJointValues = new float[sendRobotJoints.Length];
     }
 
     private void OnEnable()
     {
-       // if (string.IsNullOrEmpty(receiveSubscribeTopic))
-       // {
-       //     return;
-       // }
+        // if (string.IsNullOrEmpty(receiveSubscribeTopic))
+        // {
+        //     return;
+        // }
 
         client = new MQTTClientBuilder()
             .WithOptions(new ConnectionOptionsBuilder().WithWebSocket(connectAddress, connectPort).WithTLS())
@@ -116,16 +117,19 @@ public abstract class MQTTConnection : MonoBehaviour
 
     protected abstract void OnMessage(MQTTClient client, SubscriptionTopic topic, string topicName, ApplicationMessage message);
 
-   public void PublishJointAndGripperValues(int direction)
+
+    public void PublishJointAndGripperValues(int direction, bool lights, bool gripper)
     {
-        string jsonStr = "{\"ROVDirection\":[\"" + direction.ToString() + "\"]}";
-       // string jsonStr = "rqwrqr";
-        Debug.Log("Publish msg: "+ jsonStr);
+        string jsonStr = "{\"move\":\"" + direction.ToString() + "\",\"gripper\":\"" + Convert.ToInt32(lights).ToString() + "\",\"lights\":\"" + Convert.ToInt32(gripper) + "\",\"message\":\"" + message + "\"}";
+        // string jsonStr = "rqwrqr";
+        Debug.Log("Publish msg: " + jsonStr);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonStr);
         sender.WithPayload(bytes);
         sender.BeginPublish();
     }
+
    
+
     protected abstract string GetValuesJSON(float xposition, float yposition, float zposition, float spindlespeed, float coolant);
 
     private void OnStateChanged(MQTTClient client, ClientStates oldState, ClientStates newState)
