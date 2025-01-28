@@ -391,8 +391,8 @@ MonoBehaviour:
   ROVJoystick: {fileID: 1154643785}
   LeftJoystick: {fileID: 1829224120}
   RightJoystick: {fileID: 1245978593}
-  Water: {fileID: 0}
-  Ceiling: {fileID: 0}
+  Water: {fileID: 3281556679219934827}
+  Ceiling: {fileID: 3142340386930779543}
   MessageInput: {fileID: 647540438}
 --- !u!1 &260022467
 GameObject:
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Toggle Lights
+  m_Text: Toggle Gripper
 --- !u!222 &525331857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3022,7 +3022,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Toggle Gripper
+  m_Text: 'Toggle Lights
 
 '
 --- !u!222 &1601455303
@@ -5097,7 +5097,6 @@ Transform:
   - {fileID: 6822760175032373540}
   - {fileID: 5184852148503100064}
   - {fileID: 9118679849952099790}
-  - {fileID: 5128551637756136083}
   - {fileID: 7435657481775715677}
   - {fileID: 1237772018170606062}
   - {fileID: 5327376720976634842}
@@ -9986,12 +9985,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5976166607426652771}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -7.382781, y: -6.574819, z: 3.8633358}
-  m_LocalScale: {x: 700, y: 357.5, z: 150}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0034988727, y: 0.00034856412, z: -0.02452128}
+  m_LocalScale: {x: 49.645927, y: 50.253277, z: 4.636863}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1032448492091675577}
+  m_Father: {fileID: 7435657481775715677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5149448125599090732
 GameObject:
@@ -12413,7 +12412,8 @@ Transform:
   m_LocalPosition: {x: -7.4321146, y: -5.781569, z: 3.8658154}
   m_LocalScale: {x: 14.099847, y: 7.113964, z: 32.349453}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5128551637756136083}
   m_Father: {fileID: 1032448492091675577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7476962388626839340

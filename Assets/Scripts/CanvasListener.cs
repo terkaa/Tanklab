@@ -21,14 +21,15 @@ public class CameraActivator : MonoBehaviour
     // References to the joystick components to be deactivated
     public GameObject LeftJoystick;
     public GameObject RightJoystick;
-
-    // References to the GameObjects to be toggled
     public GameObject Water;
     public GameObject Ceiling;
+    // References to the GameObjects to be toggle
     public InputField MessageInput; 
     private string message;
     private bool lights;
     private bool gripper;
+    
+
 
     private void Start()
     {

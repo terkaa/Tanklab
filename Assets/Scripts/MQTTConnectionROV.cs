@@ -70,14 +70,22 @@ public class MQTTConnectionCNC : MQTTConnection
     // Update is called once per frame
     void Update()
     {
-        if (leftJoystick.InputDirection != Vector3.zero)
+
+        if (rightJoystick.InputDirection == Vector3.zero && leftJoystick.InputDirection == Vector3.zero)
+        {
+            PublishJointAndGripperValues(0, toggleLights.isOn, toggleGripper.isOn);
+        }
+
+        else if (leftJoystick.InputDirection != Vector3.zero)
         {
             HandleLeftJoystickDirection(leftJoystick.InputDirection);
         }
-        if (rightJoystick.InputDirection != Vector3.zero)
+        else if (rightJoystick.InputDirection != Vector3.zero)
         {
             HandleRightJoystickDirection(rightJoystick.InputDirection);
         }
+
+       
     }
 
 
@@ -91,11 +99,11 @@ public class MQTTConnectionCNC : MQTTConnection
             {
                 case float n when (n > 0):
                     Debug.Log("Left Joystick moved Right");
-                    PublishJointAndGripperValues(3, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(4, toggleLights.isOn, toggleGripper.isOn);
                     break;
                 case float n when (n < 0):
                     Debug.Log("Left Joystick moved Left");
-                    PublishJointAndGripperValues(2, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(3, toggleLights.isOn, toggleGripper.isOn);
                     break;
             }
         }
@@ -106,11 +114,11 @@ public class MQTTConnectionCNC : MQTTConnection
             {
                 case float n when (n > 0):
                     Debug.Log("Left Joystick moved Up");
-                    PublishJointAndGripperValues(0, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(1, toggleLights.isOn, toggleGripper.isOn);
                     break;
                 case float n when (n < 0):
                     Debug.Log("Left Joystick moved Down");
-                    PublishJointAndGripperValues(1, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(2, toggleLights.isOn, toggleGripper.isOn);
                     break;
             }
         }
@@ -127,11 +135,11 @@ public class MQTTConnectionCNC : MQTTConnection
             {
                 case float n when (n > 0):
                     Debug.Log("Right Joystick moved Right");
-                    PublishJointAndGripperValues(7, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(8, toggleLights.isOn, toggleGripper.isOn);
                     break;
                 case float n when (n < 0):
                     Debug.Log("Left Joystick moved Left");
-                    PublishJointAndGripperValues(6, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(7, toggleLights.isOn, toggleGripper.isOn);
                     break;
             }
         }
@@ -142,11 +150,11 @@ public class MQTTConnectionCNC : MQTTConnection
             {
                 case float n when (n > 0):
                     Debug.Log("Left Joystick moved Up");
-                    PublishJointAndGripperValues(4, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(5, toggleLights.isOn, toggleGripper.isOn);
                     break;
                 case float n when (n < 0):
                     Debug.Log("Left Joystick moved Down");
-                    PublishJointAndGripperValues(5, toggleLights.isOn, toggleGripper.isOn);
+                    PublishJointAndGripperValues(6, toggleLights.isOn, toggleGripper.isOn);
                     break;
             }
         }
