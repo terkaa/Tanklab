@@ -73,7 +73,7 @@ public class MQTTConnectionCNC : MQTTConnection
 
         if (rightJoystick.InputDirection == Vector3.zero && leftJoystick.InputDirection == Vector3.zero)
         {
-            PublishJointAndGripperValues(0, toggleLights.isOn, toggleGripper.isOn);
+            //PublishJointAndGripperValues(0, toggleLights.isOn, toggleGripper.isOn);
         }
 
         else if (leftJoystick.InputDirection != Vector3.zero)
@@ -186,17 +186,19 @@ public class MQTTConnectionCNC : MQTTConnection
         JSONNode LDrx = data[robotJointName][3].Value;
         JSONNode LDry = data[robotJointName][4].Value;
         JSONNode LDrz = data[robotJointName][5].Value;
-        JSONNode LDdirection = data[robotJointName][6].Value;
+        //JSONNode LDdirection = data[robotJointName][6].Value;
 
         //roboStatus P = JsonUtility.FromJson<roboStatus>(msg);
-        Debug.Log("X: " + LDx + " Y: " + LDy + " LDz: " + LDz + " LDdir: " + LDdirection);
+        Debug.Log("X: " + LDx + " Y: " + LDy + " LDz: " + LDz);
         //BlueROV = GameObject.Find(string.Format("Omron_LD250"));
         Debug.Log("Stage2\n");
         //calcX = 5.7f - (LDx / 1000);
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
-        BlueROV.transform.position = new Vector3(Xoffset + LDx, Zoffset + LDz, Yoffset + LDy);
-        BlueROV.transform.eulerAngles = new Vector3(LDrx, LDry, LDrz);
+        BlueROV.transform.position = QTMReference.transform.TransformPoint(Xoffset + LDx, Zoffset + LDz, Yoffset + LDy);
+
+
+        //BlueROV.transform.eulerAngles = new Vector3(LDrx, LDry, LDrz);
 
         //}
         Debug.Log("Stage3\n");
