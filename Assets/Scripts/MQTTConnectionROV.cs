@@ -210,20 +210,20 @@ public class MQTTConnectionCNC : MQTTConnection
         JSONNode LDrx = data[robotJointName][3].Value;
         JSONNode LDry = data[robotJointName][4].Value;
         JSONNode LDrz = data[robotJointName][5].Value;
+        
+        LDrx = 0.0f;
         //JSONNode LDdirection = data[robotJointName][6].Value;
 
         //roboStatus P = JsonUtility.FromJson<roboStatus>(msg);
-        Debug.Log("X: " + LDx + " Y: " + LDy + " LDz: " + LDz);
+        Debug.Log("Positions X: " + LDx + " Y: " + LDz + " LDz: " + LDy + "\n");
         //BlueROV = GameObject.Find(string.Format("Omron_LD250"));
         Debug.Log("Stage2\n");
         //calcX = 5.7f - (LDx / 1000);
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
         BlueROV.transform.position = QTMReference.transform.TransformPoint(LDx, LDz, LDy);
-
-
-        //BlueROV.transform.eulerAngles = new Vector3(LDrx, LDry, LDrz);
-
+        BlueROV.transform.eulerAngles = new Vector3(LDrx, -LDrz, LDry);
+        Debug.Log("Rotations X: " + LDrx + " Y: " + LDry + " LDz: " + LDrz+"\n");
         //}
         Debug.Log("Stage3\n");
     }

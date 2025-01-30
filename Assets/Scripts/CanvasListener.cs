@@ -8,6 +8,7 @@ public class CameraActivator : MonoBehaviour
     public Button cancelridebutton;
     public Toggle togglewater;
     public Toggle toggleceiling;
+    public Toggle togglQTMreference;
 
     // Reference to the camera component to be activated
     public Camera rideCamera;
@@ -23,6 +24,8 @@ public class CameraActivator : MonoBehaviour
     public GameObject RightJoystick;
     public GameObject Water;
     public GameObject Ceiling;
+    public GameObject QTMReference;
+    public GameObject QTMReferenceInputs;
     // References to the GameObjects to be toggle
     public InputField MessageInput; 
     private string message;
@@ -72,6 +75,15 @@ public class CameraActivator : MonoBehaviour
         {
             Debug.LogError("ToggleCeiling or Ceiling GameObject is not assigned.");
         }
+        if (togglQTMreference != null && QTMReference != null)
+        {
+            togglQTMreference.onValueChanged.AddListener(ToggleQTMreferenceVisibility);
+        }
+        else
+        {
+            Debug.LogError("ToggleQTMReference or QTMReference GameObject is not assigned.");
+        }
+
 
        // Add listener for InputField (checking for Enter key press)
         if (MessageInput != null)
@@ -130,6 +142,13 @@ public class CameraActivator : MonoBehaviour
     {
         Ceiling.SetActive(!isOn);
         Debug.Log($"Ceiling visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
+    private void ToggleQTMreferenceVisibility(bool isOn)
+    {
+        QTMReference.SetActive(!isOn);
+        QTMReferenceInputs.SetActive(!isOn);
+        Debug.Log($"QTMReference visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
     }
 
        private void OnMessageInputEndEdit(string text)
