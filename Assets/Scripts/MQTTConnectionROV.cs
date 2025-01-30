@@ -16,9 +16,13 @@ public class MQTTConnectionCNC : MQTTConnection
     private string robotGripperName = "gripper";
     public GameObject BlueROV;
     public GameObject QTMReference;
-    public float Xoffset;
-    public float Yoffset;
-    public float Zoffset;
+    public InputField QTMoffsetX;
+    public InputField QTMoffsetY;
+    public InputField QTMoffsetZ;
+    public InputField QTMrotationX;
+    public InputField QTMrotationY;
+    public InputField QTMrotationZ;
+    
     //New topic 8 lights on
     //9 lights off
     //10 Gripper close
@@ -58,12 +62,32 @@ public class MQTTConnectionCNC : MQTTConnection
         }
 
 
-        //if (xaxisscaleObject != null && yaxisscaleObject != null && zaxisscaleObject != null)
-        //{
-        //    xscale = xaxisscaleObject.GetComponent<ArticulationBody>();
-        //    yscale = yaxisscaleObject.GetComponent<ArticulationBody>();
-        //    zscale = zaxisscaleObject.GetComponent<ArticulationBody>();
-        // }
+        if (QTMReference != null)
+        {
+            Vector3 position = QTMReference.transform.position;
+            Vector3 rotation = QTMReference.transform.eulerAngles;
+
+            QTMoffsetX.text = position.x.ToString("F3", CultureInfo.InvariantCulture);
+            QTMoffsetY.text = position.y.ToString("F3", CultureInfo.InvariantCulture);
+            QTMoffsetZ.text = position.z.ToString("F3", CultureInfo.InvariantCulture);
+
+            QTMrotationX.text = rotation.x.ToString("F3", CultureInfo.InvariantCulture);
+            QTMrotationY.text = rotation.y.ToString("F3", CultureInfo.InvariantCulture);
+            QTMrotationZ.text = rotation.z.ToString("F3", CultureInfo.InvariantCulture);
+
+            // Add event listeners to update transform when values change
+            QTMoffsetX.onEndEdit.AddListener(delegate { UpdateTransform(); });
+            QTMoffsetY.onEndEdit.AddListener(delegate { UpdateTransform(); });
+            QTMoffsetZ.onEndEdit.AddListener(delegate { UpdateTransform(); });
+
+            QTMrotationX.onEndEdit.AddListener(delegate { UpdateTransform(); });
+            QTMrotationY.onEndEdit.AddListener(delegate { UpdateTransform(); });
+            QTMrotationZ.onEndEdit.AddListener(delegate { UpdateTransform(); });
+        }
+        else
+        {
+            Debug.LogError("QTMReference GameObject is not assigned.");
+        }
     }
 
 
@@ -195,7 +219,7 @@ public class MQTTConnectionCNC : MQTTConnection
         //calcX = 5.7f - (LDx / 1000);
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
-        BlueROV.transform.position = QTMReference.transform.TransformPoint(Xoffset + LDx, Zoffset + LDz, Yoffset + LDy);
+        BlueROV.transform.position = QTMReference.transform.TransformPoint(LDx, LDz, LDy);
 
 
         //BlueROV.transform.eulerAngles = new Vector3(LDrx, LDry, LDrz);
@@ -228,4 +252,26 @@ public class MQTTConnectionCNC : MQTTConnection
         return $"{{{jointsStr}}}";
     }
 
+    private void UpdateTransform()
+    {
+        if (QTMReference == null) return;
+
+        float posX, posY, posZ, rotX, rotY, rotZ;
+
+        if (float.TryParse(QTMoffsetX.text, NumberStyles.Float, CultureInfo.InvariantCulture, out posX) &&
+            float.TryParse(QTMoffsetY.text, NumberStyles.Float, CultureInfo.InvariantCulture, out posY) &&
+            float.TryParse(QTMoffsetZ.text, NumberStyles.Float, CultureInfo.InvariantCulture, out posZ))
+        {
+            QTMReference.transform.position = new Vector3(posX, posY, posZ);
+        }
+
+        if (float.TryParse(QTMrotationX.text, NumberStyles.Float, CultureInfo.InvariantCulture, out rotX) &&
+            float.TryParse(QTMrotationY.text, NumberStyles.Float, CultureInfo.InvariantCulture, out rotY) &&
+            float.TryParse(QTMrotationZ.text, NumberStyles.Float, CultureInfo.InvariantCulture, out rotZ))
+        {
+            QTMReference.transform.eulerAngles = new Vector3(rotX, rotY, rotZ);
+        }
+    }
 }
+
+
