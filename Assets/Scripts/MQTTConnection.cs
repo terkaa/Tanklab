@@ -38,7 +38,7 @@ public abstract class MQTTConnection : MonoBehaviour
 
     private MQTTClient client;
     private ApplicationMessagePacketBuilder sender;
-    private String message = "Test";
+    private String modemmessage = "Test";
 
     public bool ApplyReceivedValues { get; set; } = true; // When true, values received through MQTT are set to robot joints.
 
@@ -120,12 +120,14 @@ public abstract class MQTTConnection : MonoBehaviour
 
     public void PublishJointAndGripperValues(int direction, bool lights, bool gripper)
     {
-        string jsonStr = "{\"move\":\"" + direction.ToString() + "\",\"gripper\":\"" + Convert.ToInt32(lights).ToString() + "\",\"lights\":\"" + Convert.ToInt32(gripper) + "\",\"message\":\"" + message + "\"}";
-        // string jsonStr = "rqwrqr";
-        Debug.Log("Publish msg: " + jsonStr);
-        byte[] bytes = Encoding.UTF8.GetBytes(jsonStr);
-        sender.WithPayload(bytes);
-        sender.BeginPublish();
+        //QoSLevels qos = 2;
+        bool retain = true;
+        string message = "{\"move\":\"" + direction.ToString() + "\",\"gripper\":\"" + Convert.ToInt32(lights).ToString() + "\",\"lights\":\"" + Convert.ToInt32(gripper) + "\",\"message\":\"" + modemmessage + "\"}";
+        this.client.CreateApplicationMessageBuilder(sendSubscribeTopic)
+        //.WithQoS()
+        .WithRetain(retain)
+        .WithPayload(message)
+        .BeginPublish();
     }
 
    
