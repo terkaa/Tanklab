@@ -6,6 +6,8 @@ public class CameraActivator : MonoBehaviour
     // Reference to the Unity Button on the canvas
     public Button ridebutton;
     public Button cancelridebutton;
+    public Button resetviewpointbutton;
+    public GameObject resetviewpoint;
     public Toggle togglewater;
     public Toggle toggleceiling;
     public Toggle togglQTMreference;
@@ -55,6 +57,7 @@ public class CameraActivator : MonoBehaviour
 
         // Add listener to the messageInput change
         cancelridebutton.onClick.AddListener(DeactivateRideCamera);
+        resetviewpointbutton.onClick.AddListener(ResetViewPoint);
        
 
         // Ensure toggles and related objects are assigned
@@ -108,6 +111,7 @@ public class CameraActivator : MonoBehaviour
         // Hide the ride button and show the cancel button
         ridebutton.gameObject.SetActive(false);
         cancelridebutton.gameObject.SetActive(true);
+        resetviewpointbutton.gameObject.SetActive(false);
 
         Debug.Log("RideCamera activated, MainCamera deactivated, and buttons updated.");
     }
@@ -128,8 +132,19 @@ public class CameraActivator : MonoBehaviour
         // Show the ride button and hide the cancel button
         ridebutton.gameObject.SetActive(true);
         cancelridebutton.gameObject.SetActive(false);
+        resetviewpointbutton.gameObject.SetActive(true);
 
         Debug.Log("RideCamera deactivated, MainCamera activated, and buttons updated.");
+    }
+
+
+    private void ResetViewPoint()
+    {
+        
+        // Deactivate the main camera
+        mainCamera.gameObject.transform.position = resetviewpoint.transform.position;
+        mainCamera.gameObject.transform.rotation = resetviewpoint.transform.rotation;
+        Debug.Log("MainCamera reset.");
     }
 
     private void ToggleWaterVisibility(bool isOn)
