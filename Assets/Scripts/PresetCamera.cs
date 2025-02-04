@@ -14,10 +14,6 @@ public class CameraFollowOnClick : MonoBehaviour
         // Get the main camera in the scene
         mainCamera = Camera.main;
 
-        // Ensure all viewpoint objects are initially visible
-        viewpoint1.SetActive(true);
-        viewpoint2.SetActive(true);
-        viewpoint3.SetActive(true);
     }
 
     void Update()
@@ -36,28 +32,9 @@ public class CameraFollowOnClick : MonoBehaviour
                 // Check if the clicked object is one of the viewpoints
                 if (clickedViewpoint == viewpoint1 || clickedViewpoint == viewpoint2 || clickedViewpoint == viewpoint3)
                 {
-                    // Make the clicked viewpoint disappear
-                    clickedViewpoint.SetActive(false);
-
-                    // Activate the other two viewpoints
-                    if (clickedViewpoint == viewpoint1)
-                    {
-                        viewpoint2.SetActive(true);
-                        viewpoint3.SetActive(true);
-                    }
-                    else if (clickedViewpoint == viewpoint2)
-                    {
-                        viewpoint1.SetActive(true);
-                        viewpoint3.SetActive(true);
-                    }
-                    else if (clickedViewpoint == viewpoint3)
-                    {
-                        viewpoint1.SetActive(true);
-                        viewpoint2.SetActive(true);
-                    }
 
                     // Move the camera to the position and rotation of the clicked viewpoint
-                    mainCamera.transform.position = hit.transform.position;
+                    mainCamera.transform.position = hit.transform.position + new Vector3(0, 1.0f, 0);
                     mainCamera.transform.rotation = hit.transform.rotation;
                 }
             }
