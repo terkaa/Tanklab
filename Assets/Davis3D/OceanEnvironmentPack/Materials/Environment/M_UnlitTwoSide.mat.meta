@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c391f99f44356f4428595ab9b5f7b6cf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Materials/Environment/M_UnlitTwoSide.mat
+  uploadId: 733222

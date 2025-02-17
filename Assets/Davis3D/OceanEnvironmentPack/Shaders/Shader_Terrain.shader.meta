@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 45879ad86f4ecaf43835a726363c526e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Normal: {fileID: 2800000, guid: 4d494569b57164f4fbd1651087438618, type: 3}
+  - _NormalDetail: {fileID: 2800000, guid: abc00000000004188447198822879912, type: 3}
+  - _SandDiffuse: {fileID: 2800000, guid: abc00000000016260969062029517796, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

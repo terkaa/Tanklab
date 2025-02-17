@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3748b6194161e1143a6905ade0b83f9a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Functions/HueShift.asset
+  uploadId: 733222

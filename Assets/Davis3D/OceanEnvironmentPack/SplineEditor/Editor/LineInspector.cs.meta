@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 668731f6cd4a54b7cbeaea95414d6cec
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/SplineEditor/Editor/LineInspector.cs
+  uploadId: 733222

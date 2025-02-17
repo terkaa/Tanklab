@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 28f3db0fc8b1df447877f55799b27f44
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MicroDetail: {fileID: 2800000, guid: e582bb488f4502a40a1f9efc70e7d606, type: 3}
+  - _Diffuse: {fileID: 2800000, guid: abc00000000003537318495103793257, type: 3}
+  - _Normal: {fileID: 2800000, guid: abc00000000000746726904355842572, type: 3}
+  - _SandMask: {fileID: 2800000, guid: abc00000000000470720041989946782, type: 3}
+  - _NormalDetail: {fileID: 2800000, guid: abc00000000004188447198822879912, type: 3}
+  - _SandNormal: {fileID: 2800000, guid: abc00000000014048536414302893271, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Shader_Rock.shader
+  uploadId: 733222

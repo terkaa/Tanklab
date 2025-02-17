@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0afffffc47128824a9a5b3304c99fadb
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _WindNoise: {fileID: 2800000, guid: 086fedcfba4f17a45902312193710598, type: 3}
+  - _WindMask: {fileID: 2800000, guid: abc00000000001482198155810529704, type: 3}
+  - _Diffuse: {fileID: 2800000, guid: abc00000000016427841086125353175, type: 3}
+  - _Normal: {fileID: 2800000, guid: abc00000000010586601616951192980, type: 3}
+  - _NormalDetail: {fileID: 2800000, guid: abc00000000004188447198822879912, type: 3}
+  - _Glow: {fileID: 2800000, guid: abc00000000014400254202910335805, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Shader_Seaweed.shader
+  uploadId: 733222

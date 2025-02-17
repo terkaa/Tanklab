@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd821c245cf626e41bba6befcdc35f41
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _T_Gradient_Vertical_2wayB: {fileID: 2800000, guid: abc00000000003004992162547830626,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Shader_Godrays.shader
+  uploadId: 733222
