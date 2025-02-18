@@ -14,7 +14,7 @@ public class FoodCollectorArea : Area
     {
         for (int i = 0; i < num; i++)
         {
-            GameObject f = Instantiate(type, new Vector3(Random.Range(-range, range), 1f,
+            GameObject f = Instantiate(type, new Vector3(Random.Range(-range, range), 0.9f,
                 Random.Range(-range, range)) + transform.position,
                 Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f)));
             f.GetComponent<FoodLogic>().respawn = respawnFood;
@@ -28,7 +28,7 @@ public class FoodCollectorArea : Area
         {
             if (agent.transform.parent == gameObject.transform)
             {
-                agent.transform.position = new Vector3(Random.Range(-range, range), 2f,
+                agent.transform.position = new Vector3(Random.Range(-range, range), 0.4f,
                     Random.Range(-range, range))
                     + transform.position;
                 agent.transform.rotation = Quaternion.Euler(new Vector3(0f, Random.Range(0, 360)));
