@@ -105,7 +105,8 @@ public class FoodCollectorAgent : Agent
             dirToGo += transform.right * right;
             rotateDir = -transform.up * rotate;
 
-            var shootCommand = discreteActions[0] > 0;
+            //var shootCommand = discreteActions[0] > 0;
+            var shootCommand = false;
             if (shootCommand)
             {
                 m_Shoot = true;
@@ -220,8 +221,8 @@ public class FoodCollectorAgent : Agent
         m_Shoot = false;
         m_AgentRb.linearVelocity = Vector3.zero;
         myLaser.transform.localScale = new Vector3(0f, 0f, 0f);
-        transform.position = new Vector3(Random.Range(-m_MyArea.range, m_MyArea.range),
-            2f, Random.Range(-m_MyArea.range, m_MyArea.range))
+        transform.position = new Vector3(Random.Range(-m_MyArea.rangeX, m_MyArea.rangeX),
+            2f, Random.Range(-m_MyArea.rangeZ, m_MyArea.rangeZ))
             + area.transform.position;
         transform.rotation = Quaternion.Euler(new Vector3(0f, Random.Range(0, 360)));
 

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4317744128851916}
   - component: {fileID: 33865088620820440}
-  - component: {fileID: 135161629589834772}
   - component: {fileID: 23208712281262040}
   - component: {fileID: 54759831802293544}
   - component: {fileID: 114154930672833238}
+  - component: {fileID: -5970489657153617375}
   m_Layer: 0
   m_Name: Food
   m_TagString: food
@@ -45,27 +45,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699568242032636}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &135161629589834772
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699568242032636}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &23208712281262040
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -152,6 +131,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawn: 0
   myArea: {fileID: 0}
+--- !u!65 &-5970489657153617375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699568242032636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5194135642338935558
 PrefabInstance:
   m_ObjectHideFlags: 0
