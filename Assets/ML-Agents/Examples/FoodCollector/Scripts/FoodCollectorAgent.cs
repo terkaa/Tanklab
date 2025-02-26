@@ -14,27 +14,30 @@ public class FoodCollectorAgent : Agent
 
     float last_bucket_distance;
 
-    bool m_Frozen;
+    // bool m_Frozen;
     bool m_Poisoned;
     bool m_Satiated;
-    bool m_Shoot;
-    float m_FrozenTime;
+
+    // bool m_Shoot;
+    // float m_FrozenTime;
+
     float m_EffectTime;
     Rigidbody m_AgentRb;
-    float m_LaserLength;
+
+    // float m_LaserLength;
     // Speed of agent rotation.
 
     int n_foods_left;
 
-    public float turnSpeed = 300;
+    public float turnSpeed = 150;
 
     // Speed of agent movement.
-    public float moveSpeed = 2;
+    public float moveSpeed = 1;
     public Material normalMaterial;
     public Material badMaterial;
     public Material goodMaterial;
     public Material frozenMaterial;
-    public GameObject myLaser;
+    // public GameObject myLaser;
     public bool contribute;
     public bool useVectorObs;
     [Tooltip("Use only the frozen flag in vector observations. If \"Use Vector Obs\" " +
@@ -78,7 +81,7 @@ public class FoodCollectorAgent : Agent
 
             }
 
-            bucket_distance = bucket_distance * (m_go_to_bucket ? 1 : 0);
+            bucket_distance *= m_go_to_bucket ? 1 : 0;
 
             // Debug.Log(bucket_distance);
 
@@ -132,27 +135,28 @@ public class FoodCollectorAgent : Agent
         var continuousActions = actionBuffers.ContinuousActions;
         // var discreteActions = actionBuffers.DiscreteActions;
 
-        if (!m_Frozen)
-        {
-            var forward = Mathf.Clamp(continuousActions[0], -1f, 1f);
-            var right = Mathf.Clamp(continuousActions[1], -1f, 1f);
-            var rotate = Mathf.Clamp(continuousActions[2], -1f, 1f);
+        // if (!m_Frozen)
+        // {
+        var forward = Mathf.Clamp(continuousActions[0], -1f, 1f);
+        var right = Mathf.Clamp(continuousActions[1], -1f, 1f);
+        var rotate = Mathf.Clamp(continuousActions[2], -1f, 1f);
 
-            dirToGo = transform.forward * forward;
-            dirToGo += transform.right * right;
-            rotateDir = -transform.up * rotate;
+        dirToGo = transform.forward * forward;
+        dirToGo += transform.right * right;
+        rotateDir = -transform.up * rotate;
 
-            // var shootCommand = discreteActions[0] > 0;
-            // var shootCommand = false;
-            // if (shootCommand)
-            // {
-            //     // m_Shoot = true;
-            //     dirToGo *= 0.5f;
-            //     m_AgentRb.linearVelocity *= 0.75f;
-            // }
-            m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
-            transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
-        }
+        // var shootCommand = discreteActions[0] > 0;
+        // var shootCommand = false;
+        // if (shootCommand)
+        // {
+        //     // m_Shoot = true;
+        //     dirToGo *= 0.5f;
+        //     m_AgentRb.linearVelocity *= 0.75f;
+        // }
+
+        m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
+        transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
+        // }
 
         if (m_AgentRb.linearVelocity.sqrMagnitude > 25f) // slow it down
         {
@@ -180,15 +184,14 @@ public class FoodCollectorAgent : Agent
 
             if (bucket_distance < last_bucket_distance)
             {
+                float bucket_reward = last_bucket_distance - bucket_distance;
                 // Debug.Log("Getting closer to bucket");
-                AddReward(0.1f);
+                AddReward(bucket_reward);
                 last_bucket_distance = bucket_distance;
             }
 
 
         }
-
-
 
         // if (m_Shoot)
         // {
@@ -298,7 +301,7 @@ public class FoodCollectorAgent : Agent
         Unsatiate();
         // m_Shoot = false;
         m_AgentRb.linearVelocity = Vector3.zero;
-        myLaser.transform.localScale = new Vector3(0f, 0f, 0f);
+        // myLaser.transform.localScale = new Vector3(0f, 0f, 0f);
         transform.position = new Vector3(Random.Range(-m_MyArea.range, m_MyArea.range),
             2f, Random.Range(-m_MyArea.range, m_MyArea.range))
             + area.transform.position;
@@ -309,109 +312,193 @@ public class FoodCollectorAgent : Agent
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!m_go_to_bucket)
+        float reward = 0f;
+
+        switch (collision.gameObject.tag)
         {
-            if (collision.gameObject.CompareTag("food"))
-            {
-                Satiate();
-                collision.gameObject.GetComponent<FoodLogic>().OnEaten();
-                AddReward(1f);
-
-                m_go_to_bucket = true;
-
-                GameObject[] buckets = GameObject.FindGameObjectsWithTag("bucket");
-
-                float bucket_distance = Mathf.Infinity;
-
-                foreach (GameObject bucket in buckets)
+            case "food":
+                if (m_go_to_bucket)
                 {
-                    float distance = Vector3.Distance(gameObject.transform.position, bucket.transform.position);
+                    reward = -0.1f;
+                }
+                else
+                {
+                    reward = 1f;
 
-                    if (distance < bucket_distance)
+                    Satiate();
+                    collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+
+                    m_go_to_bucket = true;
+
+                    GameObject[] buckets = GameObject.FindGameObjectsWithTag("bucket");
+
+                    float bucket_distance = Mathf.Infinity;
+
+                    foreach (GameObject bucket in buckets)
                     {
-                        bucket_distance = distance;
+                        float distance = Vector3.Distance(gameObject.transform.position, bucket.transform.position);
+
+                        if (distance < bucket_distance)
+                        {
+                            bucket_distance = distance;
+                        }
+
                     }
 
+                    last_bucket_distance = bucket_distance;
+
                 }
 
-                last_bucket_distance = bucket_distance;
+                break;
 
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore += 1;
-                }
-            }
-            if (collision.gameObject.CompareTag("badFood"))
-            {
-                Poison();
-                collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+            case "badFood":
 
-                AddReward(-1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 1;
-                }
-            }
-            if (collision.gameObject.CompareTag("agent"))
-            {
-                AddReward(-1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 1;
-                }
-            }
-            if (collision.gameObject.CompareTag("bucket"))
-            {
-                AddReward(-0.1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 0.1f;
-                }
-            }
+                reward = -1f;
 
+                break;
+
+            case "agent":
+
+                reward = -1f;
+
+                break;
+
+            case "bucket":
+
+                if (m_go_to_bucket)
+                {
+                    reward = 1f;
+                    m_go_to_bucket = false;
+                    last_bucket_distance = Mathf.Infinity;
+
+                    UnityEngine.Debug.Log("Dropped food in the bucket");
+                }
+                else
+                {
+                    reward = -0.1f;
+                }
+
+                break;
+
+            default:
+                ;
+                break;
         }
-        else
+
+        AddReward(reward);
+
+        if (contribute)
         {
-            if (collision.gameObject.CompareTag("bucket"))
-            {
-                AddReward(1f);
-                m_go_to_bucket = false;
-                last_bucket_distance = Mathf.Infinity;
-
-                UnityEngine.Debug.Log("Dropped food in the bucket");
-
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore += 1;
-                }
-            }
-            if (collision.gameObject.CompareTag("food"))
-            {
-                AddReward(-0.1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 0.1f;
-                }
-            }
-            if (collision.gameObject.CompareTag("badFood"))
-            {
-                AddReward(-0.1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 0.1f;
-                }
-            }
-            if (collision.gameObject.CompareTag("agent"))
-            {
-                AddReward(-1f);
-                if (contribute)
-                {
-                    m_FoodCollecterSettings.totalScore -= 1f;
-                }
-            }
+            m_FoodCollecterSettings.totalScore += reward;
         }
 
     }
+
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     if (!m_go_to_bucket)
+    //     {
+    //         if (collision.gameObject.CompareTag("food"))
+    //         {
+    //             Satiate();
+    //             collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+    //             AddReward(1f);
+
+    //             m_go_to_bucket = true;
+
+    //             GameObject[] buckets = GameObject.FindGameObjectsWithTag("bucket");
+
+    //             float bucket_distance = Mathf.Infinity;
+
+    //             foreach (GameObject bucket in buckets)
+    //             {
+    //                 float distance = Vector3.Distance(gameObject.transform.position, bucket.transform.position);
+
+    //                 if (distance < bucket_distance)
+    //                 {
+    //                     bucket_distance = distance;
+    //                 }
+
+    //             }
+
+    //             last_bucket_distance = bucket_distance;
+
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore += 1;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("badFood"))
+    //         {
+    //             Poison();
+    //             collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+
+    //             AddReward(-1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 1;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("agent"))
+    //         {
+    //             AddReward(-1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 1;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("bucket"))
+    //         {
+    //             AddReward(-0.1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 0.1f;
+    //             }
+    //         }
+
+    //     }
+    //     else
+    //     {
+    //         if (collision.gameObject.CompareTag("bucket"))
+    //         {
+    //             AddReward(1f);
+    //             m_go_to_bucket = false;
+    //             last_bucket_distance = Mathf.Infinity;
+
+    //             UnityEngine.Debug.Log("Dropped food in the bucket");
+
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore += 1;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("food"))
+    //         {
+    //             AddReward(-0.1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 0.1f;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("badFood"))
+    //         {
+    //             AddReward(-0.1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 0.1f;
+    //             }
+    //         }
+    //         if (collision.gameObject.CompareTag("agent"))
+    //         {
+    //             AddReward(-1f);
+    //             if (contribute)
+    //             {
+    //                 m_FoodCollecterSettings.totalScore -= 1f;
+    //             }
+    //         }
+    //     }
+
+    // }
     public void SetEnv()
     {
         m_FoodCollecterSettings.EnvironmentReset();

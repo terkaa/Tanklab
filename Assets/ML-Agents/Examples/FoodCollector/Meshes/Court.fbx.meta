@@ -50,12 +50,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: rep_Floor
-    second: {fileID: 2100000, guid: 9705566e6ddfaac4ca6e57f5c0f9b879, type: 2}
+    second: {fileID: 2100000, guid: dc7340babc47c45c987fee58e013ed3f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: rep_WhiteWalls
-    second: {fileID: 2100000, guid: 6a39c0407dd85684384bf0277294e9b6, type: 2}
+    second: {fileID: 2100000, guid: eaad04b0e0dec42229c9cb00a981d7ac, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

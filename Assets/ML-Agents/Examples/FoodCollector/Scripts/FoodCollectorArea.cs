@@ -25,15 +25,16 @@ public class FoodCollectorArea : Area
         }
     }
 
-    void CreateBucket(GameObject type)
+    void CreateBucket(int num, GameObject type)
     {
-
-        GameObject f = Instantiate(type, new Vector3(Random.Range(-range, range), 1f,
-            Random.Range(-range, range)) + transform.position,
-            Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 0f)));
-        // f.GetComponent<FoodLogic>().respawn = respawnFood;
-        // f.GetComponent<FoodLogic>().myArea = this;
-
+        for (int i = 0; i < num; i++)
+        {
+            GameObject f = Instantiate(type, new Vector3(Random.Range(-range, range), 1f,
+                Random.Range(-range, range)) + transform.position,
+                Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 0f)));
+            // f.GetComponent<FoodLogic>().respawn = respawnFood;
+            // f.GetComponent<FoodLogic>().myArea = this;
+        }
     }
 
     public void ResetFoodArea(GameObject[] agents)
@@ -51,11 +52,11 @@ public class FoodCollectorArea : Area
 
         CreateFood(numFood, food);
         CreateFood(numBadFood, badFood);
-        CreateBucket(bucket);
-        CreateBucket(bucket);
-        CreateBucket(bucket);
-        CreateBucket(bucket);
-        CreateBucket(bucket);
+
+        int numbuckets = 1;
+
+        CreateBucket(numbuckets, bucket);
+
     }
 
     public override void ResetArea()
