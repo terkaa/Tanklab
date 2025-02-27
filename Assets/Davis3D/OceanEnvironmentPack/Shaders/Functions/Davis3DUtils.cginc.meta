@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c1294dc872624d14fbe1393617b3e116
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Functions/Davis3DUtils.cginc
+  uploadId: 733222

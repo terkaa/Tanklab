@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef388bd411635a946a09212484ab9540
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Functions/TangentToWorldNormal.asset
+  uploadId: 733222

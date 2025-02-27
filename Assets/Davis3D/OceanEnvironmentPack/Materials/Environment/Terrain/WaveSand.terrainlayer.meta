@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6bb282044f9b62a4c808396965d05963
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Materials/Environment/Terrain/WaveSand.terrainlayer
+  uploadId: 733222

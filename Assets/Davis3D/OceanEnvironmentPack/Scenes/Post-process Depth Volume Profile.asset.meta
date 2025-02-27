@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5faa1944c56161a49a2ca7285b1aacba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Scenes/Post-process Depth Volume
+    Profile.asset
+  uploadId: 733222
