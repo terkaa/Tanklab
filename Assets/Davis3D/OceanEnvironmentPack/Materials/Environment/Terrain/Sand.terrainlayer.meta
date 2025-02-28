@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e847197d399f1b34abadfdc06e05f6e0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Materials/Environment/Terrain/Sand.terrainlayer
+  uploadId: 733222

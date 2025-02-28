@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 26ea725ee598cbf42a6a8122c99a5b03
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Cubemap: {fileID: 8900000, guid: aeec6be8589c79849941a97717ceff50, type: 3}
+  - _DifOpacityMask: {fileID: 2800000, guid: 6394cf7ba98889942988282150124412, type: 3}
+  - _Opacity_MasterMask: {fileID: 2800000, guid: abc00000000013220669993734470830,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198056
+  packageName: Ocean Environment Pack
+  packageVersion: 2.0
+  assetPath: Assets/Davis3D/OceanEnvironmentPack/Shaders/Shader_Jellyfish.shader
+  uploadId: 733222
