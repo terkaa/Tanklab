@@ -2,31 +2,58 @@
     "VisualFoodCollector": {
         "checkpoints": [
             {
-                "steps": 499912,
-                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-499912.onnx",
-                "reward": 119.18461485703786,
-                "creation_time": 1740594376.3184783,
+                "steps": 14999939,
+                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-14999939.onnx",
+                "reward": 40.33530227674378,
+                "creation_time": 1740743207.0943587,
                 "auxillary_file_paths": [
-                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-499912.pt"
+                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-14999939.pt"
                 ]
             },
             {
-                "steps": 660912,
-                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-660912.onnx",
-                "reward": 240.660515944163,
-                "creation_time": 1740595070.4456186,
+                "steps": 15499939,
+                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-15499939.onnx",
+                "reward": 44.65027538836002,
+                "creation_time": 1740745139.00562,
                 "auxillary_file_paths": [
-                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-660912.pt"
+                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-15499939.pt"
+                ]
+            },
+            {
+                "steps": 15999939,
+                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-15999939.onnx",
+                "reward": 70.7629982151091,
+                "creation_time": 1740747074.946938,
+                "auxillary_file_paths": [
+                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-15999939.pt"
+                ]
+            },
+            {
+                "steps": 16499939,
+                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-16499939.onnx",
+                "reward": 54.86062638908625,
+                "creation_time": 1740749010.315328,
+                "auxillary_file_paths": [
+                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-16499939.pt"
+                ]
+            },
+            {
+                "steps": 16759939,
+                "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-16759939.onnx",
+                "reward": 39.568613052368164,
+                "creation_time": 1740750020.615555,
+                "auxillary_file_paths": [
+                    "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-16759939.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 660912,
+            "steps": 16759939,
             "file_path": "results\\VisualFoodCollector_round3\\VisualFoodCollector.onnx",
-            "reward": 240.660515944163,
-            "creation_time": 1740595070.4456186,
+            "reward": 39.568613052368164,
+            "creation_time": 1740750020.615555,
             "auxillary_file_paths": [
-                "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-660912.pt"
+                "results\\VisualFoodCollector_round3\\VisualFoodCollector\\VisualFoodCollector-16759939.pt"
             ]
         }
     },

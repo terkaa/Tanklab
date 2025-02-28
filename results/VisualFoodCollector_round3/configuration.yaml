@@ -35,7 +35,7 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-    init_path: results\VisualFoodCollector_round2\VisualFoodCollector\checkpoint.pt
+    init_path: null
     keep_checkpoints: 5
     even_checkpoints: false
     max_steps: 3000000000
@@ -67,10 +67,10 @@ engine_settings:
 environment_parameters: null
 checkpoint_settings:
   run_id: VisualFoodCollector_round3
-  initialize_from: VisualFoodCollector_round2
+  initialize_from: null
   load_model: false
   resume: false
-  force: false
+  force: true
   train_model: false
   inference: false
   results_dir: results

@@ -14,6 +14,8 @@ public class FoodCollectorAgent : Agent
 
     float last_bucket_distance;
 
+    float localAngularVelocity;
+
     // bool m_Frozen;
     bool m_Poisoned;
     bool m_Satiated;
@@ -57,6 +59,7 @@ public class FoodCollectorAgent : Agent
         n_foods_left = GameObject.FindGameObjectsWithTag("food").Length;
         m_go_to_bucket = false;
         last_bucket_distance = Mathf.Infinity;
+        localAngularVelocity = 0f;
 
         SetResetParameters();
     }
@@ -85,19 +88,23 @@ public class FoodCollectorAgent : Agent
 
             // Debug.Log(bucket_distance);
 
-            var localVelocity = transform.InverseTransformDirection(m_AgentRb.linearVelocity);
-            sensor.AddObservation(localVelocity.x);
-            sensor.AddObservation(localVelocity.z);
+            var localLinearVelocity = transform.InverseTransformDirection(m_AgentRb.linearVelocity);
+
+            // Debug.Log("Rotating: " + m_AgentRb.linearVelocity);
+
+            sensor.AddObservation(localLinearVelocity.x);
+            sensor.AddObservation(localLinearVelocity.z);
+            sensor.AddObservation(localAngularVelocity);
             sensor.AddObservation(bucket_distance);
             // sensor.AddObservation(m_go_to_bucket);
             // sensor.AddObservation(m_Frozen);
             // sensor.AddObservation(m_Shoot);
 
         }
-        else if (useVectorFrozenFlag)
-        {
-            // sensor.AddObservation(m_Frozen);
-        }
+        // else if (useVectorFrozenFlag)
+        // {
+        //     // sensor.AddObservation(m_Frozen);
+        // }
     }
 
     public Color32 ToColor(int hexVal)
@@ -137,13 +144,17 @@ public class FoodCollectorAgent : Agent
 
         // if (!m_Frozen)
         // {
-        var forward = Mathf.Clamp(continuousActions[0], -1f, 1f);
-        var right = Mathf.Clamp(continuousActions[1], -1f, 1f);
+        var forward = Mathf.Clamp(continuousActions[0], -0.1f, 1f);
+        var right = Mathf.Clamp(continuousActions[1], -0.1f, 0.1f);
         var rotate = Mathf.Clamp(continuousActions[2], -1f, 1f);
 
         dirToGo = transform.forward * forward;
         dirToGo += transform.right * right;
         rotateDir = -transform.up * rotate;
+
+        localAngularVelocity = rotateDir[1] * (Time.fixedDeltaTime * turnSpeed);
+
+        // Debug.Log("Rotating: " + rotateDir[1] * (Time.fixedDeltaTime * turnSpeed));
 
         // var shootCommand = discreteActions[0] > 0;
         // var shootCommand = false;
@@ -181,14 +192,33 @@ public class FoodCollectorAgent : Agent
             }
 
             // Debug.Log("Distance between objects: " + bucket_distance);
+            float bucket_reward = last_bucket_distance - bucket_distance;
 
-            if (bucket_distance < last_bucket_distance)
+            if (bucket_reward > 0)
             {
-                float bucket_reward = last_bucket_distance - bucket_distance;
-                // Debug.Log("Getting closer to bucket");
-                AddReward(bucket_reward);
+                AddReward(Mathf.Log(bucket_reward + 1));
                 last_bucket_distance = bucket_distance;
             }
+            else
+            {
+                // AddReward(-Mathf.Log(-bucket_reward + 1));
+            }
+
+            // AddReward(bucket_reward);
+            // 
+            // if (bucket_distance < last_bucket_distance)
+            // {
+            //     // Debug.Log("Getting closer to bucket");
+            //     last_bucket_distance = bucket_distance;
+            // }
+
+            // if (bucket_distance < last_bucket_distance)
+            // {
+            //     float bucket_reward = last_bucket_distance - bucket_distance;
+            //     // Debug.Log("Getting closer to bucket");
+            //     AddReward(bucket_reward);
+            //     last_bucket_distance = bucket_distance;
+            // }
 
 
         }
