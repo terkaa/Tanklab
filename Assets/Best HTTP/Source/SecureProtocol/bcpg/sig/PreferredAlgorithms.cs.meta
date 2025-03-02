@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2a7c38494a745484fa37da49228ea98a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/bcpg/sig/PreferredAlgorithms.cs
+  uploadId: 622754

@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: c54ee56c868092749ae800211ccf9380
+timeCreated: 1572510038
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crmf/IEncryptedValuePadder.cs
+  uploadId: 622754

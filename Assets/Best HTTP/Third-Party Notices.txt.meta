@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8173c1a1ef2759f4fbd199585cabb4ca
+timeCreated: 1593592117
+licenseType: Store
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Third-Party Notices.txt
+  uploadId: 622754

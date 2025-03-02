@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 549ae5c28c10d0b48a0fa7e45c085dff
+timeCreated: 1606125511
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/PlatformSupport/Threading/LockHelpers.cs
+  uploadId: 622754

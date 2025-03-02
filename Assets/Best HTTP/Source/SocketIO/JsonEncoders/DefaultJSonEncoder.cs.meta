@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 692eedd1d08951b4fac2cd4447430cf7
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SocketIO/JsonEncoders/DefaultJSonEncoder.cs
+  uploadId: 622754

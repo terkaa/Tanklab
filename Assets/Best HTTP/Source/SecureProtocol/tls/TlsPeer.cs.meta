@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cac1e59d41bf46a43afdbb4ac6980fcb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/TlsPeer.cs
+  uploadId: 622754

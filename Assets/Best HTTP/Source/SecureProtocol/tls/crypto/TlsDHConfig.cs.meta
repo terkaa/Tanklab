@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bf5102488668c9d44981e50eedd3491d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/crypto/TlsDHConfig.cs
+  uploadId: 622754

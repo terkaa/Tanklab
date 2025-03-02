@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d02a57f915340ff4493c1ad2b44d93ea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/ServerHello.cs
+  uploadId: 622754

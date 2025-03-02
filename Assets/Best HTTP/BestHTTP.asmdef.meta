@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9069ac25d95ca17448a247f3bb1c769f
+timeCreated: 1571210040
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/BestHTTP.asmdef
+  uploadId: 622754

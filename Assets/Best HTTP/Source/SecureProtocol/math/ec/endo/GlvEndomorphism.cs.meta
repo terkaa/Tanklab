@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ef17475fe8bc0ff46ac3012a1bc5a09a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/math/ec/endo/GlvEndomorphism.cs
+  uploadId: 622754

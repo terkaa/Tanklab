@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e735d6733fbcd8f46a2dbc2de051f0ce
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/link_android_subset.xml
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 63a5893e2656ccd4697e361b89aacfba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Runtime/MQTT/Packets/Builders/PublishReleasePacketBuilder.cs
+  uploadId: 522207

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 86bbb9386c084ce47a3672ac12a5afa1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/asn1/ConstructedBitStream.cs
+  uploadId: 622754

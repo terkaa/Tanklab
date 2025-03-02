@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 39307d0f60b169f4a81f23cd2faa883a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/math/ec/custom/sec/SecT283K1Curve.cs
+  uploadId: 622754

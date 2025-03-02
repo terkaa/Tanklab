@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 56076fa04e5259c439c2b244cf9b73c8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/generators/Ed448KeyPairGenerator.cs
+  uploadId: 622754

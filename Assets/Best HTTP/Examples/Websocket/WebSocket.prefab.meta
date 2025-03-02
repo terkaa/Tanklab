@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7dd2f86eb3e1a5f438f5b3ba39bd9e9b
+timeCreated: 1571299283
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Examples/Websocket/WebSocket.prefab
+  uploadId: 622754

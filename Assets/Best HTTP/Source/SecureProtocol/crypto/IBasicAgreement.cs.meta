@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cd9d504c0c209eb4ab0ba46c3f015a85
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/IBasicAgreement.cs
+  uploadId: 622754

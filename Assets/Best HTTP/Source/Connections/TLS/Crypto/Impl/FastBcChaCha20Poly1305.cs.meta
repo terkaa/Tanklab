@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8147dce9f66d3aa42acf242bd200aa46
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastBcChaCha20Poly1305.cs
+  uploadId: 622754

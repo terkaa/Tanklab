@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1a67f5696d756244c892a70f1ad95e9f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/crypto/TlsEncryptor.cs
+  uploadId: 622754

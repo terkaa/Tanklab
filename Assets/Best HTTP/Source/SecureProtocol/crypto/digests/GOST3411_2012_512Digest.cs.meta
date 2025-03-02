@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 172c217a7fbd94c47b30653edce69b2b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/digests/GOST3411_2012_512Digest.cs
+  uploadId: 622754

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7f53324f77555fe42bd19122a07da1dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/engines/BlowfishEngine.cs
+  uploadId: 622754

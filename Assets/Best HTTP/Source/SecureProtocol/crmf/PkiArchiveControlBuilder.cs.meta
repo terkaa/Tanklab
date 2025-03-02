@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 53e72fbeaecc61049b4b45f296b26073
+timeCreated: 1572510030
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crmf/PkiArchiveControlBuilder.cs
+  uploadId: 622754

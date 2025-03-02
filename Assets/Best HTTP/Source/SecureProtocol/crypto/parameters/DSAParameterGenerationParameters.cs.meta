@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5bae2087e40f1ca4497d9a252aff83c8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/parameters/DSAParameterGenerationParameters.cs
+  uploadId: 622754

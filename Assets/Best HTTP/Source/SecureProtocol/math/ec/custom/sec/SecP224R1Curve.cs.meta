@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bb8ec695468ca8a468dc59c7ef35e719
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/math/ec/custom/sec/SecP224R1Curve.cs
+  uploadId: 622754

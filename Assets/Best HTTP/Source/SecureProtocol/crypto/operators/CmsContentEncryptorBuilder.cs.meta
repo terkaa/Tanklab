@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5f1801d0412d82845ad2464c331d5aae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crypto/operators/CmsContentEncryptorBuilder.cs
+  uploadId: 622754

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5c288b9c47c5c4343aa6095908cf116e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Examples/BestMQTT.Examples.asmdef
+  uploadId: 522207

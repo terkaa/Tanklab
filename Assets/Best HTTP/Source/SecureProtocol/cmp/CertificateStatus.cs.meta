@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b49242607e5a6d4ab596d2eeb0a2403
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/cmp/CertificateStatus.cs
+  uploadId: 622754

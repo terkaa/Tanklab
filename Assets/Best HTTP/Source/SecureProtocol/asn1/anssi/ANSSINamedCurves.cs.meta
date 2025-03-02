@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e908adca735a50b4ea4afcceea30542f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/asn1/anssi/ANSSINamedCurves.cs
+  uploadId: 622754

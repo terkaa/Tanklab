@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bdf9d0d59653fa8418a86f22360ff91e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/Forms/HTTPFieldData.cs
+  uploadId: 622754

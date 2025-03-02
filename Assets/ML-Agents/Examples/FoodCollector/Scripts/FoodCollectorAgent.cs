@@ -3,6 +3,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class FoodCollectorAgent : Agent
 {
@@ -11,6 +12,8 @@ public class FoodCollectorAgent : Agent
     FoodCollectorArea m_MyArea;
 
     bool m_go_to_bucket;
+    public MQTTConnection DTcon;
+    public Toggle toggleHW;
 
     float last_bucket_distance;
 
@@ -49,6 +52,7 @@ public class FoodCollectorAgent : Agent
 
     EnvironmentParameters m_ResetParams;
 
+  
     public override void Initialize()
     {
         m_AgentRb = GetComponent<Rigidbody>();
@@ -164,10 +168,17 @@ public class FoodCollectorAgent : Agent
         //     dirToGo *= 0.5f;
         //     m_AgentRb.linearVelocity *= 0.75f;
         // }
-
+        if (toggleHW.isOn)
+        {
+            Debug.Log("HW in the loop");
+            DTcon.PublishJointAndGripperValues(4, false, false);
+        }
+        else 
+        {
+        Debug.Log("SW in the loop");
         m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
         transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
-        // }
+         }
 
         if (m_AgentRb.linearVelocity.sqrMagnitude > 25f) // slow it down
         {

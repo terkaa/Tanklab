@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f303e223fe9745349acae6049c49a896
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Runtime/MQTT/NegotiatedOptions.cs
+  uploadId: 522207

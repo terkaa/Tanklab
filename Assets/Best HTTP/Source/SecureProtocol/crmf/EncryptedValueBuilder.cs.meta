@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: abe43d8f6206a0f47816e41b75cde35d
+timeCreated: 1572510036
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/crmf/EncryptedValueBuilder.cs
+  uploadId: 622754

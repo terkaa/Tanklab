@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 80cb39f4371a29e4d8da5a85303b5ee9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209238
+  packageName: Best MQTT
+  packageVersion: 1.1.1
+  assetPath: Assets/BestMQTT/Examples/Generic Client/GenericClient.Logic.cs
+  uploadId: 522207

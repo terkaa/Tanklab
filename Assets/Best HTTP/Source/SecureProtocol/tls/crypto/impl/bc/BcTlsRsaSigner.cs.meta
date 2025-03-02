@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c44e4055ed235cb4bb8ce86d1f7c1a09
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/tls/crypto/impl/bc/BcTlsRsaSigner.cs
+  uploadId: 622754

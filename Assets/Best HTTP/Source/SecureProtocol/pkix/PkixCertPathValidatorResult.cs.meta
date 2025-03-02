@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f0872050d12dad44abb76c1745b5f870
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155981
+  packageName: Best HTTP/2
+  packageVersion: 2.8.6
+  assetPath: Assets/Best HTTP/Source/SecureProtocol/pkix/PkixCertPathValidatorResult.cs
+  uploadId: 622754
