@@ -6,6 +6,7 @@ using System.Text;
 using BestMQTT;
 using BestMQTT.Packets.Builders;
 using BestMQTT.Packets;
+using SimpleJSON;
 
 public abstract class MQTTConnection : MonoBehaviour
 {
@@ -45,6 +46,13 @@ public abstract class MQTTConnection : MonoBehaviour
     public float[] JointsValues { get; private set; }
 
     public float[] SendJointValues { get; private set; }
+
+    public JSONNode ROVx = 10000.00f;
+    public JSONNode ROVy = 10000.00f;
+    public JSONNode ROVz = 10000.00f;
+    public JSONNode ROVrx = 10000.00f;
+    public JSONNode ROVry = 10000.00f;
+    public JSONNode ROVrz = 10000.00f;
 
     protected virtual void Awake()
     {

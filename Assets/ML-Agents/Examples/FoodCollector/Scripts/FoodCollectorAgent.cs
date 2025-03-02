@@ -171,8 +171,13 @@ public class FoodCollectorAgent : Agent
         if (toggleHW.isOn)
         {
             Debug.Log("HW in the loop");
-            DTcon.PublishJointAndGripperValues(4, false, false);
-        }
+            DTcon.PublishJointAndGripperValues(4, false, false); //Always sending 4 we have to figure out how to convert AI command to ROV move commands 
+            if (DTcon.ROVx < 9999.999) //If we are getting sane readings move the agent
+            {
+                transform.position = new Vector3(DTcon.ROVx, DTcon.ROVz, DTcon.ROVy);
+                transform.eulerAngles = new Vector3(DTcon.ROVrx, -(DTcon.ROVrz) + 60.0f, DTcon.ROVry);
+            }
+            }
         else 
         {
         Debug.Log("SW in the loop");
