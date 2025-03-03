@@ -52,7 +52,7 @@ public class FoodCollectorAgent : Agent
 
     EnvironmentParameters m_ResetParams;
 
-  
+
     public override void Initialize()
     {
         m_AgentRb = GetComponent<Rigidbody>();
@@ -177,13 +177,13 @@ public class FoodCollectorAgent : Agent
                 transform.position = new Vector3(DTcon.ROVx, DTcon.ROVz, DTcon.ROVy);
                 transform.eulerAngles = new Vector3(DTcon.ROVrx, -(DTcon.ROVrz) + 60.0f, DTcon.ROVry);
             }
-            }
-        else 
+        }
+        else
         {
-        Debug.Log("SW in the loop");
-        m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
-        transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
-         }
+            Debug.Log("SW in the loop");
+            m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
+            transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
+        }
 
         if (m_AgentRb.linearVelocity.sqrMagnitude > 25f) // slow it down
         {
@@ -398,6 +398,9 @@ public class FoodCollectorAgent : Agent
                 break;
 
             case "badFood":
+
+                Poison();
+                collision.gameObject.GetComponent<FoodLogic>().OnEaten();
 
                 reward = -1f;
 

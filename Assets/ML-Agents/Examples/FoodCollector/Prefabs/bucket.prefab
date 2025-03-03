@@ -151,6 +151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4317744128851916}
     m_Modifications:
+    - target: {fileID: -9094338712016631749, guid: 21155d1390bc275459457174326fff8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66163cf35956a4be08e801b750c26f33, type: 2}
     - target: {fileID: -8679921383154817045, guid: 21155d1390bc275459457174326fff8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -203,10 +207,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8280182020167004388, guid: 21155d1390bc275459457174326fff8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66163cf35956a4be08e801b750c26f33, type: 2}
+    - target: {fileID: -7489146143387214588, guid: 21155d1390bc275459457174326fff8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66163cf35956a4be08e801b750c26f33, type: 2}
     - target: {fileID: 919132149155446097, guid: 21155d1390bc275459457174326fff8a, type: 3}
       propertyPath: m_Name
       value: Bucket
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 21155d1390bc275459457174326fff8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66163cf35956a4be08e801b750c26f33, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
