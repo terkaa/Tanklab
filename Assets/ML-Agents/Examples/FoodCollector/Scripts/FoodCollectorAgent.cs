@@ -399,8 +399,15 @@ public class FoodCollectorAgent : Agent
 
             case "badFood":
 
-                Poison();
-                collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+                if (m_go_to_bucket)
+                {
+                    reward = -1f;
+                }
+                else
+                {
+                    Poison();
+                    collision.gameObject.GetComponent<FoodLogic>().OnEaten();
+                }
 
                 reward = -1f;
 

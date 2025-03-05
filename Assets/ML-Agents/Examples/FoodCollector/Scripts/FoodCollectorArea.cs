@@ -63,7 +63,7 @@ public class FoodCollectorArea : Area
         CreateFood(numFood, food);
         CreateFood(numBadFood, badFood);
 
-        int numbuckets = 5;
+        int numbuckets = 1;
 
         CreateBucket(numbuckets, bucket);
 
