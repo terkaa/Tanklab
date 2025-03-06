@@ -2,40 +2,58 @@
     "VisualFoodCollector": {
         "checkpoints": [
             {
-                "steps": 499900,
-                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-499900.onnx",
-                "reward": 0.6431655776169565,
-                "creation_time": 1741201189.0898948,
+                "steps": 6499936,
+                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-6499936.onnx",
+                "reward": 100.28884530905634,
+                "creation_time": 1741253363.166173,
                 "auxillary_file_paths": [
-                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-499900.pt"
+                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-6499936.pt"
                 ]
             },
             {
-                "steps": 999947,
-                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-999947.onnx",
-                "reward": 29.0393646620214,
-                "creation_time": 1741204750.6614654,
+                "steps": 6999936,
+                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-6999936.onnx",
+                "reward": 49.909273174901806,
+                "creation_time": 1741257785.982167,
                 "auxillary_file_paths": [
-                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-999947.pt"
+                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-6999936.pt"
                 ]
             },
             {
-                "steps": 1063347,
-                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-1063347.onnx",
-                "reward": 16.96979083244999,
-                "creation_time": 1741205300.4294589,
+                "steps": 7499936,
+                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-7499936.onnx",
+                "reward": 47.36078984849155,
+                "creation_time": 1741262187.8184621,
                 "auxillary_file_paths": [
-                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-1063347.pt"
+                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-7499936.pt"
+                ]
+            },
+            {
+                "steps": 7999936,
+                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-7999936.onnx",
+                "reward": 79.38912255875766,
+                "creation_time": 1741266593.948069,
+                "auxillary_file_paths": [
+                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-7999936.pt"
+                ]
+            },
+            {
+                "steps": 8211736,
+                "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-8211736.onnx",
+                "reward": 25.598531059920788,
+                "creation_time": 1741268475.3889282,
+                "auxillary_file_paths": [
+                    "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-8211736.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1063347,
+            "steps": 8211736,
             "file_path": "results\\VisualFoodCollector_round5\\VisualFoodCollector.onnx",
-            "reward": 16.96979083244999,
-            "creation_time": 1741205300.4294589,
+            "reward": 25.598531059920788,
+            "creation_time": 1741268475.3889282,
             "auxillary_file_paths": [
-                "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-1063347.pt"
+                "results\\VisualFoodCollector_round5\\VisualFoodCollector\\VisualFoodCollector-8211736.pt"
             ]
         }
     },
