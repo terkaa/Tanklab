@@ -221,8 +221,8 @@ public class MQTTConnectionCNC : MQTTConnection
         //calcX = 5.7f - (LDx / 1000);
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
-        BlueROV.transform.position = QTMReference.transform.TransformPoint(LDx, LDz, LDy);
-        BlueROV.transform.eulerAngles = new Vector3(LDrx, -LDrz+60.0f, LDry);
+        BlueROV.transform.position = new Vector3(LDx, LDz+0.45f, LDy);
+        BlueROV.transform.eulerAngles = new Vector3(LDrx, -LDrz+90.0f, LDry);
         //Debug.Log("Rotations X: " + LDrx + " Y: " + LDry + " LDz: " + LDrz+"\n");
         //}
         //Debug.Log("Stage3\n");
