@@ -126,11 +126,11 @@ public abstract class MQTTConnection : MonoBehaviour
     protected abstract void OnMessage(MQTTClient client, SubscriptionTopic topic, string topicName, ApplicationMessage message);
 
 
-    public void PublishJointAndGripperValues(int direction, bool lights, bool gripper)
+    public void PublishJointAndGripperValues(float direction, float pan, float rotate, bool lights, bool gripper)
     {
-        //QoSLevels qos = 2;
         bool retain = true;
-        string message = "{\"move\":\"" + direction.ToString() + "\",\"gripper\":\"" + Convert.ToInt32(lights).ToString() + "\",\"lights\":\"" + Convert.ToInt32(gripper) + "\",\"message\":\"" + modemmessage + "\"}";
+        string message = "{\"forward\":\"" + direction.ToString() + "\",\"pan\":\"" + pan.ToString() + "\",\"rotate\":\"" + rotate.ToString() + "\",\"gripper\":\"" + Convert.ToInt32(lights).ToString() + "\",\"lights\":\"" + Convert.ToInt32(gripper) + "\",\"message\":\"" + modemmessage + "\"}";
+        //Debug.Log(message + "\n");
         this.client.CreateApplicationMessageBuilder(sendSubscribeTopic)
         //.WithQoS()
         .WithRetain(retain)

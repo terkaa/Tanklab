@@ -168,10 +168,16 @@ public class FoodCollectorAgent : Agent
         //     dirToGo *= 0.5f;
         //     m_AgentRb.linearVelocity *= 0.75f;
         // }
+        int motion_forward = 0;
+        int motion_pan = 0;
+        int motion_rotate = 0;
+
         if (toggleHW.isOn)
         {
-            Debug.Log("HW in the loop");
-            DTcon.PublishJointAndGripperValues(4, false, false); //Always sending 4 we have to figure out how to convert AI command to ROV move commands 
+            //Debug.Log("HW in the loop");
+           // Debug.Log("HW in the loop Forward: " + continuousActions[0] + " Pan: " + continuousActions[1] + " Rotate: " + continuousActions[2]);
+          //  DTcon.PublishJointAndGripperValues(Mathf.Round(continuousActions[0] * 10.0f) * 0.1f, Mathf.Round(continuousActions[1] * 10.0f) * 0.1f, Mathf.Round(continuousActions[2] * 10.0f) * 0.1f, false, false); //Always sending 4 we have to figure out how to convert AI command to ROV move commands 
+            
             if (DTcon.ROVx < 9999.999) //If we are getting sane readings move the agent
             {
                 transform.position = new Vector3(DTcon.ROVx, DTcon.ROVz, DTcon.ROVy);
@@ -180,7 +186,7 @@ public class FoodCollectorAgent : Agent
         }
         else
         {
-            Debug.Log("SW in the loop");
+            Debug.Log("SW in the loop Direction: " + continuousActions[0] + " Side: " + continuousActions[1] + " Rotation: " + continuousActions[2]);
             m_AgentRb.AddForce(dirToGo * moveSpeed, ForceMode.VelocityChange);
             transform.Rotate(rotateDir, Time.fixedDeltaTime * turnSpeed);
         }

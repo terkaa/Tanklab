@@ -16,8 +16,8 @@ public class MQTTConnectionCNC : MQTTConnection
     [Header("ROV settings")]
     [SerializeField]
     private string robotGripperName = "gripper";
-    /* public GameObject BlueROV;
-     public GameObject QTMReference;
+    public GameObject BlueROV;
+    /* public GameObject QTMReference;
      public InputField QTMoffsetX;
      public InputField QTMoffsetY;
      public InputField QTMoffsetZ;
@@ -63,31 +63,32 @@ public class MQTTConnectionCNC : MQTTConnection
         //Debug.Log(data[0][0]);
 
         //Debug.Log("Stage1\n");
-        ROVx = data[robotJointName][0].Value;
-        ROVy = data[robotJointName][1].Value;
-        ROVz = data[robotJointName][2].Value;
-        ROVrx = data[robotJointName][3].Value;
-        ROVry = data[robotJointName][4].Value;
-        ROVrz = data[robotJointName][5].Value;
-        
-        ROVrx = 0.0f;
+        JSONNode LDx = data[robotJointName][0].Value;
+        JSONNode LDy = data[robotJointName][1].Value;
+        JSONNode LDz = data[robotJointName][2].Value;
+        JSONNode LDrx = data[robotJointName][3].Value;
+        JSONNode LDry = data[robotJointName][4].Value;
+        JSONNode LDrz = data[robotJointName][5].Value;
+
+        LDrx = 0.0f;
         //JSONNode LDdirection = data[robotJointName][6].Value;
 
         //roboStatus P = JsonUtility.FromJson<roboStatus>(msg);
-        //Debug.Log("Positions X: " + LDx + " Y: " + LDz + " LDz: " + LDy + "\n");
+        Debug.Log("Positions X: " + LDx + " Y: " + LDz + " LDz: " + LDy + "\n");
         //BlueROV = GameObject.Find(10.103.141.123string.Format("Omron_LD250"));
         //Debug.Log("Stage2\n");
         //calcX = 5.7f - (LDx / 1000);
         //if (float.TryParse(String.Format(data["roboPose"][0].Value), NumberStyles.Any, CultureInfo.InvariantCulture, out calcX))
         //{
-       // BlueROV.transform.position = QTMReference.transform.TransformPoint(LDx, LDz, LDy);
-       // BlueROV.transform.eulerAngles = new Vector3(LDrx, -LDrz+60.0f, LDry);
+        //BlueROV.transform.position = new Vector3(-LDx*30.0f, (LDz + 0.45f) * 30.0f, -LDy * 30.0f);
+        BlueROV.transform.position = new Vector3(-LDx, (LDz + 0.45f), -LDy);
+        BlueROV.transform.eulerAngles = new Vector3(LDrx, -LDrz + 155.0f, LDry);
         //Debug.Log("Rotations X: " + LDrx + " Y: " + LDry + " LDz: " + LDrz+"\n");
         //}
         //Debug.Log("Stage3\n");
     }
 
-   
+
     protected override string GetValuesJSON(float xposition, float yposition, float zposition, float spindlespeed, float coolant)
     {
         string jointKey = robotJointName;

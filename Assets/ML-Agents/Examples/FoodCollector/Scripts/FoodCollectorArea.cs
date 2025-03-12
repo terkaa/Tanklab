@@ -21,9 +21,15 @@ public class FoodCollectorArea : Area
 
         for (int i = 0; i < num; i++)
         {
-            GameObject f = Instantiate(type, new Vector3(Random.Range(-x_range, x_range), 1f,
-                Random.Range(-range, range)) + transform.position,
-                Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f)));
+            // GameObject f = Instantiate(type, new Vector3(Random.Range(-x_range, x_range), 1f,
+            //     Random.Range(-range, range)) + transform.position,
+            //     Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f)));
+
+
+             GameObject f = Instantiate(type, new Vector3(1.0f, 1f,
+                 -1.0f) + transform.position,
+                 Quaternion.Euler(new Vector3(0f, 0f, 90f)));
+
             f.GetComponent<FoodLogic>().respawn = respawnFood;
             f.GetComponent<FoodLogic>().myArea = this;
         }
@@ -36,9 +42,12 @@ public class FoodCollectorArea : Area
 
         for (int i = 0; i < num; i++)
         {
-            GameObject f = Instantiate(type, new Vector3(Random.Range(-x_range, x_range), 1f,
-                Random.Range(-range, range)) + transform.position,
-                Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 0f)));
+            GameObject f = Instantiate(type, new Vector3(40.0f, 1.0f,
+                -10.0f) + transform.position,
+                Quaternion.Euler(new Vector3(0f, 0f, 0f)));
+            //GameObject f = Instantiate(type, new Vector3(Random.Range(-x_range, x_range), 1f,
+            //    Random.Range(-range, range)) + transform.position,
+            //    Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 0f)));
             // f.GetComponent<FoodLogic>().respawn = respawnFood;
             // f.GetComponent<FoodLogic>().myArea = this;
         }
