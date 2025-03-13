@@ -74,7 +74,7 @@ public class MQTTConnectionCNC : MQTTConnection
         //JSONNode LDdirection = data[robotJointName][6].Value;
 
         //roboStatus P = JsonUtility.FromJson<roboStatus>(msg);
-        Debug.Log("Positions X: " + LDx + " Y: " + LDz + " LDz: " + LDy + "\n");
+        //Debug.Log("Positions X: " + LDx + " Y: " + LDz + " LDz: " + LDy + "\n");
         //BlueROV = GameObject.Find(10.103.141.123string.Format("Omron_LD250"));
         //Debug.Log("Stage2\n");
         //calcX = 5.7f - (LDx / 1000);

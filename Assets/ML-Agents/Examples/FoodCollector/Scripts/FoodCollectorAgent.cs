@@ -176,12 +176,15 @@ public class FoodCollectorAgent : Agent
         {
             //Debug.Log("HW in the loop");
            // Debug.Log("HW in the loop Forward: " + continuousActions[0] + " Pan: " + continuousActions[1] + " Rotate: " + continuousActions[2]);
-          //  DTcon.PublishJointAndGripperValues(Mathf.Round(continuousActions[0] * 10.0f) * 0.1f, Mathf.Round(continuousActions[1] * 10.0f) * 0.1f, Mathf.Round(continuousActions[2] * 10.0f) * 0.1f, false, false); //Always sending 4 we have to figure out how to convert AI command to ROV move commands 
+            DTcon.PublishJointAndGripperValues(Mathf.Round(continuousActions[0] * 10.0f) * 0.1f, Mathf.Round(continuousActions[1] * 10.0f) * 0.1f, Mathf.Round(continuousActions[2] * 10.0f) * 0.1f, false, false); //Always sending 4 we have to figure out how to convert AI command to ROV move commands 
             
             if (DTcon.ROVx < 9999.999) //If we are getting sane readings move the agent
             {
-                transform.position = new Vector3(DTcon.ROVx, DTcon.ROVz, DTcon.ROVy);
-                transform.eulerAngles = new Vector3(DTcon.ROVrx, -(DTcon.ROVrz) + 60.0f, DTcon.ROVry);
+                //Debug.Log("HW in the loop");
+                // transform.position = new Vector3(DTcon.ROVx, DTcon.ROVz, DTcon.ROVy);
+                // transform.eulerAngles = new Vector3(DTcon.ROVrx, -(DTcon.ROVrz) + 60.0f, DTcon.ROVry);
+               // transform.position = new Vector3(-DTcon.ROVx, (DTcon.ROVz + 0.45f), -DTcon.ROVy);
+               // transform.eulerAngles = new Vector3(DTcon.ROVrx, (DTcon.ROVz + 0.45f), -DTcon.ROVry);
             }
         }
         else
@@ -376,6 +379,7 @@ public class FoodCollectorAgent : Agent
                 else
                 {
                     reward = 1f;
+                    UnityEngine.Debug.Log("Grabbed me some corals!");
 
                     Satiate();
                     collision.gameObject.GetComponent<FoodLogic>().OnEaten();
