@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: New Web Profile
+  m_Name: New Windows Profile
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
-  m_BuildTarget: 20
-  m_Subtarget: 0
-  m_PlatformId: 84a3bb9e7420477f885e98145999eb20
+  m_BuildTarget: 19
+  m_Subtarget: 2
+  m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 5232281567171445011
+    rid: 8801856077907361863
   m_OverrideGlobalSceneList: 0
   m_Scenes: []
   m_ScriptingDefines: []
@@ -34,8 +34,8 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: FIU'
-    - line: '|   productName: TankLab'
+    - line: '|   companyName: DefaultCompany'
+    - line: '|   productName: FIU_Tank_Lab'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -65,8 +65,8 @@ MonoBehaviour:
     - line: '|   m_SplashScreenLogos: []'
     - line: '|   m_VirtualRealitySplashScreen: {instanceID: 0}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
-    - line: '|   defaultScreenWidth: 1024'
-    - line: '|   defaultScreenHeight: 768'
+    - line: '|   defaultScreenWidth: 2048'
+    - line: '|   defaultScreenHeight: 1024'
     - line: '|   defaultScreenWidthWeb: 960'
     - line: '|   defaultScreenHeightWeb: 600'
     - line: '|   m_StereoRenderingPath: 0'
@@ -539,6 +539,13 @@ MonoBehaviour:
     - line: '|       m_Height: 720'
     - line: '|       m_Kind: 1'
     - line: '|       m_SubKind: '
+    - line: '|   - m_BuildTarget: VisionOS'
+    - line: '|     m_Icons:'
+    - line: '|     - m_Textures: []'
+    - line: '|       m_Width: 1024'
+    - line: '|       m_Height: 1024'
+    - line: '|       m_Kind: 0'
+    - line: '|       m_SubKind: '
     - line: '|   m_BuildTargetBatching: []'
     - line: '|   m_BuildTargetShaderSettings: []'
     - line: '|   m_BuildTargetGraphicsJobs: []'
@@ -550,13 +557,18 @@ MonoBehaviour:
     - line: '|   - m_BuildTarget: AndroidPlayer'
     - line: '|     m_APIs: 150000000b000000'
     - line: '|     m_Automatic: 0'
+    - line: '|   - m_BuildTarget: WebGLSupport'
+    - line: '|     m_APIs: 0b000000'
+    - line: '|     m_Automatic: 0'
     - line: '|   m_BuildTargetVRSettings: []'
     - line: '|   m_DefaultShaderChunkSizeInMB: 16'
     - line: '|   m_DefaultShaderChunkCount: 0'
     - line: '|   openGLRequireES31: 0'
     - line: '|   openGLRequireES31AEP: 0'
     - line: '|   openGLRequireES32: 0'
-    - line: '|   m_TemplateCustomTags: {}'
+    - line: '|   m_TemplateCustomTags:'
+    - line: '|     DESCRIPTION: '
+    - line: '|     WEBXR_POLYFILL_CONFIG: '
     - line: '|   mobileMTRendering:'
     - line: '|     Android: 1'
     - line: '|     iPhone: 1'
@@ -818,7 +830,7 @@ MonoBehaviour:
     - line: '|   webGLExceptionSupport: 1'
     - line: '|   webGLNameFilesAsHashes: 0'
     - line: '|   webGLShowDiagnostics: 0'
-    - line: '|   webGLDataCaching: 1'
+    - line: '|   webGLDataCaching: 0'
     - line: '|   webGLDebugSymbols: 0'
     - line: '|   webGLEmscriptenArgs: '
     - line: '|   webGLModulesDirectory: '
@@ -838,16 +850,17 @@ MonoBehaviour:
     - line: '|   webGLMemoryGeometricGrowthCap: 96'
     - line: '|   webGLEnableWebGPU: 0'
     - line: '|   webGLPowerPreference: 2'
-    - line: '|   webGLWebAssemblyTable: 0'
+    - line: '|   webGLWebAssemblyTable: 1'
     - line: '|   webGLWebAssemblyBigInt: 0'
     - line: '|   webGLCloseOnQuit: 0'
-    - line: '|   webWasm2023: 0'
+    - line: '|   webWasm2023: 1'
     - line: '|   scriptingDefineSymbols: {}'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
     - line: '|     Android: 1'
-    - line: '|   il2cppCompilerConfiguration: {}'
+    - line: '|   il2cppCompilerConfiguration:'
+    - line: '|     WebGL: 0'
     - line: '|   il2cppCodeGeneration: {}'
     - line: '|   il2cppStacktraceInformation: {}'
     - line: '|   managedStrippingLevel:'
@@ -878,8 +891,8 @@ MonoBehaviour:
     - line: '|   editorAssembliesCompatibilityLevel: 1'
     - line: '|   m_RenderingPath: 1'
     - line: '|   m_MobileRenderingPath: 1'
-    - line: '|   metroPackageName: FIUTankLab'
-    - line: '|   metroPackageVersion: 1.0.0.0'
+    - line: '|   metroPackageName: FIU_Tank_Lab'
+    - line: '|   metroPackageVersion: '
     - line: '|   metroCertificatePath: '
     - line: '|   metroCertificatePassword: '
     - line: '|   metroCertificateSubject: '
@@ -887,7 +900,7 @@ MonoBehaviour:
     - line: '|   metroCertificateNotAfter: 0000000000000000'
     - line: '|   metroApplicationDescription: FIU_Tank_Lab'
     - line: '|   wsaImages: {}'
-    - line: '|   metroTileShortName: FIU_Tank_Lab'
+    - line: '|   metroTileShortName: '
     - line: '|   metroTileShowName: 0'
     - line: '|   metroMediumTileShowName: 0'
     - line: '|   metroLargeTileShowName: 0'
@@ -975,10 +988,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 5232281567171445011
-      type: {class: WebGLPlatformSettings, ns: UnityEditor.WebGL, asm: UnityEditor.WebGL.Extensions}
+    - rid: 8801856077907361863
+      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
         m_Development: 0
         m_ConnectProfiler: 0
@@ -989,9 +1000,11 @@ MonoBehaviour:
         m_ExplicitNullChecks: 0
         m_ExplicitDivideByZeroChecks: 0
         m_ExplicitArrayBoundsChecks: 0
-        m_CompressionType: -1
+        m_CompressionType: 0
         m_InstallInBuildFolder: 0
-        m_CodeOptimization: 0
-        m_WebGLClientBrowserPath: 
-        m_WebGLClientBrowserType: 0
-        m_WebGLTextureSubtarget: 0
+        m_WindowsBuildAndRunDeployTarget: 0
+        m_Architecture: 0
+        m_CreateSolution: 0
+        m_CopyPDBFiles: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 

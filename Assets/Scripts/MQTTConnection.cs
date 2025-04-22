@@ -60,7 +60,7 @@ public abstract class MQTTConnection : MonoBehaviour
         // }
 
         client = new MQTTClientBuilder()
-            .WithOptions(new ConnectionOptionsBuilder().WithWebSocket(connectAddress, connectPort).WithTLS())
+            .WithOptions(new ConnectionOptionsBuilder().WithTCP(connectAddress, connectPort).Build())
             .WithEventHandler(OnConnected)
             .WithEventHandler(OnDisconnected)
             .WithEventHandler(OnStateChanged)
