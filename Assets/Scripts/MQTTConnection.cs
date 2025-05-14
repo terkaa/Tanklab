@@ -58,7 +58,18 @@ public abstract class MQTTConnection : MonoBehaviour
         // {
         //     return;
         // }
+#if UNITY_WEBGL
+         client = new MQTTClientBuilder()
+            .WithOptions(new ConnectionOptionsBuilder().WithWebSocket(connectAddress, 5349).WithTLS())
+            .WithEventHandler(OnConnected)
+            .WithEventHandler(OnDisconnected)
+            .WithEventHandler(OnStateChanged)
+            .WithEventHandler(OnError)
+            .CreateClient();
+        client.BeginConnect(ConnectPacketBuilderCallback);
+        Debug.Log("connected");
 
+#else
         client = new MQTTClientBuilder()
             .WithOptions(new ConnectionOptionsBuilder().WithTCP(connectAddress, connectPort).Build())
             .WithEventHandler(OnConnected)
@@ -68,6 +79,7 @@ public abstract class MQTTConnection : MonoBehaviour
             .CreateClient();
         client.BeginConnect(ConnectPacketBuilderCallback);
         Debug.Log("connected");
+#endif
     }
 
     private ConnectPacketBuilder ConnectPacketBuilderCallback(MQTTClient client, ConnectPacketBuilder builder)
