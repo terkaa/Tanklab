@@ -11,7 +11,8 @@ public class CameraActivator : MonoBehaviour
     public Toggle togglewater;
     public Toggle toggleceiling;
     public Toggle togglQTMreference;
-
+    public Toggle toggleWall;
+    public Toggle toggleDrone;
     // Reference to the camera component to be activated
     public Camera rideCamera;
 
@@ -28,6 +29,9 @@ public class CameraActivator : MonoBehaviour
     public GameObject Ceiling;
     public GameObject QTMReference;
     public GameObject QTMReferenceInputs;
+    public GameObject Wall;
+    public GameObject Door;
+    public GameObject Drone;
     // References to the GameObjects to be toggle
     public InputField MessageInput; 
     private string message;
@@ -85,6 +89,24 @@ public class CameraActivator : MonoBehaviour
         else
         {
             Debug.LogError("ToggleQTMReference or QTMReference GameObject is not assigned.");
+        }
+
+        if (toggleWall != null && Wall != null && Door != null)
+        {
+            toggleWall.onValueChanged.AddListener(ToggleWallVisibility);
+        }
+        else
+        {
+            Debug.LogError("ToggleWall or Door GameObject is not assigned.");
+        }
+
+        if (toggleDrone != null && Drone != null)
+        {
+            toggleDrone.onValueChanged.AddListener(ToggleDroneVisibility);
+        }
+        else
+        {
+            Debug.LogError("ToggleDrone or Drone GameObject is not assigned.");
         }
 
 
@@ -164,6 +186,19 @@ public class CameraActivator : MonoBehaviour
         QTMReference.SetActive(!isOn);
         QTMReferenceInputs.SetActive(!isOn);
         Debug.Log($"QTMReference visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
+    private void ToggleWallVisibility(bool isOn)
+    {
+        Wall.SetActive(!isOn);
+        Door.SetActive(!isOn);
+        Debug.Log($"Wall visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
+    }
+
+    private void ToggleDroneVisibility(bool isOn)
+    {
+        Drone.SetActive(!isOn);
+        Debug.Log($"Drone visibility toggled: {(isOn ? "Enabled" : "Disabled")}");
     }
 
        private void OnMessageInputEndEdit(string text)
