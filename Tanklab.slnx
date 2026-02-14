@@ -1,0 +1,8 @@
+﻿<Solution>
+  <Project Path="BestHTTP.csproj" />
+  <Project Path="BestMQTT.Examples.csproj" />
+  <Project Path="BestMQTT.csproj" />
+  <Project Path="NewAssembly.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+</Solution>
